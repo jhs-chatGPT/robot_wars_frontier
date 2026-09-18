@@ -15,10 +15,11 @@ export function HangarPage() {
   const boardUnit = useGameStore((s) => s.boardUnit);
   const upgradeUnit = useGameStore((s) => s.upgradeUnit);
   const customUnits = useGameStore((s) => s.catalog.customUnits);
-  const [selectedId, setSelectedId] = useState(pilot.unitId);
+  const [selectedId, setSelectedId] = useState(() => sessionStorage.getItem('rwf-selected-unit') || pilot.unitId);
   const [message, setMessage] = useState('');
   const owned = useMemo(() => [...allUnitTemplates, ...customUnits].filter((u) => !u.enemyOnly && pilot.ownedUnits.includes(u.id)), [pilot.ownedUnits, customUnits]);
   const unit = owned.find((u) => u.id === selectedId) ?? owned[0];
+  if (unit && sessionStorage.getItem('rwf-selected-unit') === unit.id) sessionStorage.removeItem('rwf-selected-unit');
   if (!unit) return <div className="placeholder">보유 기체가 없습니다.</div>;
   const up = getUpgrades(pilot, unit.id);
   const stats = unitStats(pilot, unit);

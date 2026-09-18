@@ -1,4 +1,4 @@
-# ROBOT WARS FRONTIER — React v0.9.0
+# ROBOT WARS FRONTIER — React v0.9.1
 
 기존 **v0.8 P15.6.23 안정화판**을 기준으로 전체 게임 구조를 React로 이전한 버전입니다.
 겉으로 보이는 게임 자산과 핵심 밸런스 데이터는 유지하면서, 단일 `index.html`에 섞여 있던 화면/상태/전투 로직을 React 컴포넌트와 TypeScript 모듈로 분리했습니다.

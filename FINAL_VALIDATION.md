@@ -1,8 +1,8 @@
-# Robot Wars Frontier React v0.9.0 — Final Validation
+# Robot Wars Frontier React v0.9.1 — Final Validation
 
 ## 완료 상태
 - Legacy 기준: v0.8 P15.6.23
-- React 통합판: v0.9.0
+- React 통합판: v0.9.1
 - 기능 이전: 완료
 
 ## 정적 검증

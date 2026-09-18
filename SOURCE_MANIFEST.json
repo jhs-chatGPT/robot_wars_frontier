@@ -1,597 +1,605 @@
-[
-  {
-    "path": ".gitignore",
-    "size": 43,
-    "sha256": "869b81868070b226961721a583e0e11db084e522ce0a7ca47d23c632307d9c2e"
-  },
-  {
-    "path": "FINAL_VALIDATION.md",
-    "size": 1092,
-    "sha256": "72d0195d9416ca88bc41ab4ff397e349524e11edd44a0c029f497a6fcaafb5f5"
-  },
-  {
-    "path": "MIGRATION_STATUS.md",
-    "size": 5013,
-    "sha256": "a16a97407bb7e557d4b8aa9adf332e828d5b057cf496a59c7420be48fde9687f"
-  },
-  {
-    "path": "README.md",
-    "size": 2972,
-    "sha256": "e6e7b55efe93c60bd9e64c519644f708c6c8e1458694015c6b60397873b9240c"
-  },
-  {
-    "path": "index.html",
-    "size": 367,
-    "sha256": "a6638fac278b17f109ed88a58d1d2a342d6029ed2c3b57dcdf66e4c79b7093fb"
-  },
-  {
-    "path": "netlify.toml",
-    "size": 120,
-    "sha256": "d434ed07ddd63252f129f1435f2b0ceaa5e926855f66d8491672fbe2cbc9d3ee"
-  },
-  {
-    "path": "package.json",
-    "size": 492,
-    "sha256": "91ee615bb5a1bc3fe2f2ee69eb2271dee7f21e2c9d304c7d77ba67af3e75f83c"
-  },
-  {
-    "path": "public/assets/backgrounds/bg-hangar.webp",
-    "size": 68140,
-    "sha256": "a618ab3c15d23f15c311116f02d54181dcc554798feb498b6e961ebf1afe4ed7"
-  },
-  {
-    "path": "public/assets/backgrounds/bg-pilot.webp",
-    "size": 65516,
-    "sha256": "e176ddd4e6fae3a5f793bdb9dff5c01626d0aaab7713f752601fcf66b4c9af7c"
-  },
-  {
-    "path": "public/assets/backgrounds/bg-space.webp",
-    "size": 30750,
-    "sha256": "b5421b1af3cc1d2ff6c34dc9092042ad0d0a04222425735d2dcafdd9d0d965f6"
-  },
-  {
-    "path": "public/assets/enemy_pilots/commander_1.png",
-    "size": 280936,
-    "sha256": "38f2eace684539ee68628c28211bc4fc37f8222ee6ab8751416198885d892c84"
-  },
-  {
-    "path": "public/assets/enemy_pilots/commander_2.png",
-    "size": 284198,
-    "sha256": "ed804b93faa084f862c39de16b4ddac103e6e36861ab711be2ac11dd45a62c57"
-  },
-  {
-    "path": "public/assets/enemy_pilots/commander_3.png",
-    "size": 266153,
-    "sha256": "5c9feace83e26dfa7fbd9543b9be99165402d0afc6ff28f1ef8c1e6fe5d7bab6"
-  },
-  {
-    "path": "public/assets/enemy_pilots/commander_4.png",
-    "size": 248802,
-    "sha256": "1c49310523950726556ba67ed639abaf91906d4d9e8a1595b52c0c889b8f6d5a"
-  },
-  {
-    "path": "public/assets/enemy_pilots/elite_1.png",
-    "size": 225739,
-    "sha256": "307ade46aa9b3977def4475e640d8ded5c9e8ba2d8f03aaa74c43d703ee9df3f"
-  },
-  {
-    "path": "public/assets/enemy_pilots/elite_2.png",
-    "size": 197934,
-    "sha256": "6d85cfd38cea5e58a85ba9ec5d0387780c87bb5dfdffd899169fd1a653f5366b"
-  },
-  {
-    "path": "public/assets/enemy_pilots/elite_3.png",
-    "size": 225955,
-    "sha256": "3a979142c4d41c9855b5ed43f8d1c7902a9d704a9e31f89b2b7fbc56ffca035c"
-  },
-  {
-    "path": "public/assets/enemy_pilots/elite_4.png",
-    "size": 238672,
-    "sha256": "7302d65d3b0a0b8cd9f3c28326c14e77fd0a9e8026b4c420cfbdf858cee008fb"
-  },
-  {
-    "path": "public/assets/enemy_pilots/general_1.png",
-    "size": 177179,
-    "sha256": "b0da19bc29d99f524c91dc9f3e8b8f16cf39cf74bdf247c06a1a092a089ef75e"
-  },
-  {
-    "path": "public/assets/enemy_pilots/general_2.png",
-    "size": 183752,
-    "sha256": "d22c1cd6e4a1e48d17b9e8456947088f1820584e1b6f5588d6ba9f67a2d21ded"
-  },
-  {
-    "path": "public/assets/enemy_pilots/general_3.png",
-    "size": 173131,
-    "sha256": "fd4da2dc8d8c0632f8a4035ee53fbc5f3594795823a19c4efa51561d9babfc1e"
-  },
-  {
-    "path": "public/assets/enemy_pilots/general_4.png",
-    "size": 166699,
-    "sha256": "1ea38986d8a43b005f80250e1fa18f1bd9337256a5b1cbc7619002d018146ce0"
-  },
-  {
-    "path": "public/assets/enemy_units/e_c1.png",
-    "size": 1811788,
-    "sha256": "c8d484868724977cc78498f4cf44d1757776cc2e9ff9c6c9a64c767ec49d1d58"
-  },
-  {
-    "path": "public/assets/enemy_units/e_c2.png",
-    "size": 1890920,
-    "sha256": "bb45fe6a30841b18c9e44d0847e5387f85e047bbcfb87cb843d02778bd8d480e"
-  },
-  {
-    "path": "public/assets/enemy_units/e_e1.png",
-    "size": 1460111,
-    "sha256": "6afd90fd4895ca1b06b363f853669c0778055814c6c21077bd167fae0b36e9f0"
-  },
-  {
-    "path": "public/assets/enemy_units/e_e2.png",
-    "size": 1762008,
-    "sha256": "d76b1c5bb63bbcc9e7a375344be5244ae3c572eefc7dfafa4166c0f7060713de"
-  },
-  {
-    "path": "public/assets/enemy_units/e_e3.png",
-    "size": 1760248,
-    "sha256": "db587596fe039559706cec02848f1d229db415d4caf6d4c79918e47e8cbfbff9"
-  },
-  {
-    "path": "public/assets/enemy_units/e_g1.png",
-    "size": 1433659,
-    "sha256": "bf54d56947c96f832d4d10c35083174f6da8ef58408e0ecac2c74e327b4b6ad1"
-  },
-  {
-    "path": "public/assets/enemy_units/e_g2.png",
-    "size": 1379168,
-    "sha256": "89da119c895ef046b6c7405298161acdf834c6c8d3b3b39e1a89954332f1a3b0"
-  },
-  {
-    "path": "public/assets/enemy_units/e_g3.png",
-    "size": 1275370,
-    "sha256": "8b87fbf785a75b718ce58140fbf7419fb9ea860b1d5a35509da96554ece0980e"
-  },
-  {
-    "path": "public/assets/operators/cecil_fullbody.png",
-    "size": 705668,
-    "sha256": "fcc144ba4bdb22471ef8975737d06b70b1d4c942aa6e8f0c02dfe2437f9975fd"
-  },
-  {
-    "path": "public/assets/operators/cecil_fullbody.webp",
-    "size": 386346,
-    "sha256": "750b6cccee1adf3102b65353258ee92f04e19e9656ba54013187df8661b4f684"
-  },
-  {
-    "path": "public/assets/operators/cecil_portrait.png",
-    "size": 258768,
-    "sha256": "3ff03fb19ea550cc40b2106513a5527c777e51fde56b8b3f3e7b163478229728"
-  },
-  {
-    "path": "public/assets/operators/cecil_portrait.webp",
-    "size": 47198,
-    "sha256": "a59e25a686874ac450c554b4010f7a17619cd481cbbce46111adf42cc9f15024"
-  },
-  {
-    "path": "public/assets/pilots/female_1.webp",
-    "size": 56540,
-    "sha256": "1f0c262bdcc329464f6e9241eceec31acc97ce59b90307f2b4517668db291963"
-  },
-  {
-    "path": "public/assets/pilots/female_2.webp",
-    "size": 59916,
-    "sha256": "98003b85c7afe19347bcf26bacff8edff7d0c7b95a6f36e4d04e5e28ae928181"
-  },
-  {
-    "path": "public/assets/pilots/female_3.webp",
-    "size": 61594,
-    "sha256": "b8e4cee13480fc63a4a88cb1ec84437ab80d7b8e1743f73b12fd7fe06e9830d9"
-  },
-  {
-    "path": "public/assets/pilots/female_4.webp",
-    "size": 63996,
-    "sha256": "8a6c06b33cb1d08ef86651375aac610cdea27c6042d837eacf0d9d9398bd3834"
-  },
-  {
-    "path": "public/assets/pilots/female_5.webp",
-    "size": 59092,
-    "sha256": "a26f4f96430040e454841cccd1e261ffcc5c35580d48582dfd3161fbb05aae47"
-  },
-  {
-    "path": "public/assets/pilots/fullbody/female_1.webp",
-    "size": 218654,
-    "sha256": "90ea40a144f1cb3d2adf8220d6db624eb8bd1b64a6f1bd0dc01b99c03f67f23e"
-  },
-  {
-    "path": "public/assets/pilots/fullbody/female_2.webp",
-    "size": 55748,
-    "sha256": "87d85bccaaf6d56fb4741b0c175eeb0f709b4a242354c2977da790b41d09698f"
-  },
-  {
-    "path": "public/assets/pilots/fullbody/female_3.webp",
-    "size": 297932,
-    "sha256": "0a7ab9c08f88dd3c07737e48c94e58e234667a8a8ed8cd8447ca28f92355396f"
-  },
-  {
-    "path": "public/assets/pilots/fullbody/female_4.webp",
-    "size": 61010,
-    "sha256": "b8f0a87c915dbb7a836e466ecf554f15817931cce8260ae171188b9ab74e0820"
-  },
-  {
-    "path": "public/assets/pilots/fullbody/female_5.webp",
-    "size": 46084,
-    "sha256": "b8f3712ba8261ef3ab208a4707f0253e002fc38815cd5fde9d387b9a81f273f2"
-  },
-  {
-    "path": "public/assets/pilots/fullbody/male_1.webp",
-    "size": 35802,
-    "sha256": "8f06fbf33caab464fe9ae2cd8fde34ed1933fef0bd28f2f30a8c9cda605587ee"
-  },
-  {
-    "path": "public/assets/pilots/fullbody/male_2.webp",
-    "size": 38092,
-    "sha256": "ba451d0e7f06fde7f6508db705b6585c6a22f53458f99600e3f0a929373e0333"
-  },
-  {
-    "path": "public/assets/pilots/fullbody/male_3.webp",
-    "size": 42176,
-    "sha256": "5fb19c9d3aeaf2888227f8232b3c4240caccaea50902832461c92560f1b8faff"
-  },
-  {
-    "path": "public/assets/pilots/fullbody/male_4.webp",
-    "size": 46660,
-    "sha256": "39cea8a53bebfcd25195818177d9867c82df9d2c2af90a8320bfa26582569068"
-  },
-  {
-    "path": "public/assets/pilots/fullbody/male_5.webp",
-    "size": 36184,
-    "sha256": "a2b65acc4039d51d5608d8e7a2d46fe25aae5f02548df89ad2b4647f72398e88"
-  },
-  {
-    "path": "public/assets/pilots/male_1.webp",
-    "size": 49684,
-    "sha256": "cb3bbd95ee74984043c471ec1d8d1525b9560527c0183cd7c8556bd713ce0919"
-  },
-  {
-    "path": "public/assets/pilots/male_2.webp",
-    "size": 56286,
-    "sha256": "08a681e77617926a52db17a28334d4df342fb608e3f2b8ebb1699ba6d9609a88"
-  },
-  {
-    "path": "public/assets/pilots/male_3.webp",
-    "size": 50388,
-    "sha256": "03eedfeee24cf6294de7915a220bee810435825853293044f7064b7f55c8dc3f"
-  },
-  {
-    "path": "public/assets/pilots/male_4.webp",
-    "size": 55946,
-    "sha256": "5eb93ea9055928915a2b4f55b7bca6562c7a9b714cae867d3ddd0fceb72f2484"
-  },
-  {
-    "path": "public/assets/pilots/male_5.webp",
-    "size": 57982,
-    "sha256": "4f5a0ab1298c9505041f8bce3e8c7dbdd9c2b3cf87094f6a362c833e27ad7d36"
-  },
-  {
-    "path": "public/assets/scenario/hero_desert.webp",
-    "size": 35654,
-    "sha256": "7d9a668be5c170317c6ebeb38bfa217ba8033fde9176f4eed819501650d9d8f6"
-  },
-  {
-    "path": "public/assets/scenario/operator_portrait.webp",
-    "size": 12748,
-    "sha256": "096466e5a0f40023917679fa18f14f914ab887fdb974230d4573d6412ac524f3"
-  },
-  {
-    "path": "public/assets/scenario/operator_scene.webp",
-    "size": 109920,
-    "sha256": "28282f48a0c396abecae8c9f3174ef5c3a4279e74f19b7dc3341d0e10b591877"
-  },
-  {
-    "path": "public/assets/scenario/thumb_desert.webp",
-    "size": 10152,
-    "sha256": "58d0a313e443c85103dd5593b3eaddd9b50aaf358fdc739783d116c63a341e01"
-  },
-  {
-    "path": "public/assets/scenario/thumb_moon.webp",
-    "size": 9776,
-    "sha256": "c7b9b9d48bb57596e7e0458f6aca68529ceffae5a53d53ee23fbb99e4e90f0e4"
-  },
-  {
-    "path": "public/assets/scenario/thumb_orbit.webp",
-    "size": 9764,
-    "sha256": "0ebe9877b23e7c7112daf22b0ffb8afd72367d3143cfeb9526fe7d3b3e7b0f09"
-  },
-  {
-    "path": "public/assets/scenario/thumb_rescue.webp",
-    "size": 10236,
-    "sha256": "ddc7a09f59a4eaabd144175218b9124f1a38e51223f887c13da7741dc4b7a115"
-  },
-  {
-    "path": "public/assets/scenario/thumb_shadow.webp",
-    "size": 9476,
-    "sha256": "7ea617be7570fa3a935c523cda48a3ddf0c448959fe20b3ec7949712f031b0d4"
-  },
-  {
-    "path": "public/assets/sortie/cecil_fullbody.png",
-    "size": 705668,
-    "sha256": "fcc144ba4bdb22471ef8975737d06b70b1d4c942aa6e8f0c02dfe2437f9975fd"
-  },
-  {
-    "path": "public/assets/sortie/cecil_portrait.jpg",
-    "size": 327364,
-    "sha256": "74a85018c20e116b7d65b4bcefdc46b6df6869ecca52256fecaed35008835802"
-  },
-  {
-    "path": "public/assets/sortie/cecil_portrait.png",
-    "size": 2000304,
-    "sha256": "f74e3e8429b2ac43754eb00791145d530f6f411807bb8562a017a3c4abae4004"
-  },
-  {
-    "path": "public/assets/sortie/cecil_portrait.webp",
-    "size": 328930,
-    "sha256": "32e9df386aff052d67e397d89953059b414c7f6493e9bbb67003540a99f15cad"
-  },
-  {
-    "path": "public/assets/sortie/hangar.jpg",
-    "size": 421023,
-    "sha256": "16dc018fb7b46a3a6493817b9387461029bab0b8d962738eba8bd627648125bd"
-  },
-  {
-    "path": "public/assets/units/black_creed.png",
-    "size": 1418711,
-    "sha256": "16cde1ab50d4f44ce2cac5a9bd3e3f2b993115bf5895e447bcc8379eedfefc18"
-  },
-  {
-    "path": "public/assets/units/braveblue.png",
-    "size": 1701874,
-    "sha256": "045939be7f1f7e134e9c6b1d090f07aed3899fdfe1f8c1a8a282698ebf0c53ef"
-  },
-  {
-    "path": "public/assets/units/iron_colossus.png",
-    "size": 2360252,
-    "sha256": "e161b38be205ba1ececf5773e7a58c53bdf303299602c46fe80debce7980e504"
-  },
-  {
-    "path": "public/assets/units/maxi_magna.png",
-    "size": 2033614,
-    "sha256": "31aa719e29df7e85f35416ae7639dda622888494bbd7fa1d58fdbcbab5de0003"
-  },
-  {
-    "path": "public/assets/units/seraph.png",
-    "size": 1551008,
-    "sha256": "e668cb74fa0e70468e1d2e9aa640b8a314c9cb83ca1e79dbcde6224caecada4b"
-  },
-  {
-    "path": "public/assets/units/shadow_master.png",
-    "size": 1327404,
-    "sha256": "b1c64a23d67dc176b79540512b8dedf510427ac336b3d0483d1b9fafd98357ed"
-  },
-  {
-    "path": "public/assets/units/titan_braver.png",
-    "size": 1739296,
-    "sha256": "cedf2aced3d7a94f63e6cc7f19a142adde7a201df745eab2190217334d320cb9"
-  },
-  {
-    "path": "public/assets/units/unit_1.webp",
-    "size": 65522,
-    "sha256": "00c4bd3b1eaa5e67d0d2cd28942e0eacdd88e3c29bb4171adaf67d4c9b6a9e90"
-  },
-  {
-    "path": "public/assets/units/unit_2.webp",
-    "size": 62466,
-    "sha256": "c25cd63bc102593fd519424a568e70c0affa80717530992ff0d445824925b74b"
-  },
-  {
-    "path": "public/assets/units/unit_3.webp",
-    "size": 54088,
-    "sha256": "a912aff351c999b7ae9f4becc534b329752c5eb6aaf8fde870cdf4d6376a0355"
-  },
-  {
-    "path": "public/assets/units/unit_4.webp",
-    "size": 80130,
-    "sha256": "6c7bee856adde52fc8f3877e4ae7a1a39b75f5fef50685e8d7948296bd1df5fb"
-  },
-  {
-    "path": "public/assets/units/unit_5.webp",
-    "size": 88220,
-    "sha256": "4c6356daa454bd32d5dfb703efeaf5c4166a311a4184b9c725bd4085989f853a"
-  },
-  {
-    "path": "public/assets/units/unit_6.webp",
-    "size": 74786,
-    "sha256": "e2204891b0ba72df1daa7cbee0a46020bd676a3bc1268f86046190d3579f76a3"
-  },
-  {
-    "path": "public/assets/units/unit_7.webp",
-    "size": 81000,
-    "sha256": "b11550025649432d718e7121ac2bf1ac7a3b9f65f1950d7452b0c0cf00cc7b85"
-  },
-  {
-    "path": "public/assets/units/unit_8.webp",
-    "size": 106502,
-    "sha256": "4b21c8f4511fcd81a6ab6a8a68e142a64ea2a58a7a12110d1b79f71ebdd680c3"
-  },
-  {
-    "path": "public/assets/units/valkyrie_gundam.png",
-    "size": 1468657,
-    "sha256": "ac8abf33f3ed06d91e9a99c894c3c0cbf97e8b890253ee4339c41b6d0075c0c4"
-  },
-  {
-    "path": "src/App.tsx",
-    "size": 1696,
-    "sha256": "92815eb1c1a3f0353d6a459196cb1fcba67f7b3d14c7ea6ebd6e4dddf103705a"
-  },
-  {
-    "path": "src/components/layout/GameLayout.tsx",
-    "size": 2092,
-    "sha256": "c2c3754ee3c72a77915676512075d573ec10d25d701d69b14b29120cc78a341f"
-  },
-  {
-    "path": "src/data/battleEngine.ts",
-    "size": 32401,
-    "sha256": "1f611d1b75338e1292dee302073548ff34b03cadbee147cb941d8e38c5f51148"
-  },
-  {
-    "path": "src/data/calculations.ts",
-    "size": 1977,
-    "sha256": "a093ca4e9f3053f6ff5a5db02805fe04256d0b06602831eddc4aaddb926d4819"
-  },
-  {
-    "path": "src/data/enemies.ts",
-    "size": 3944,
-    "sha256": "f90277d3a20b3fd1953737134b1a1f0802db3ad8dfdf4347c74d6b4413cfd2ef"
-  },
-  {
-    "path": "src/data/parts.ts",
-    "size": 8820,
-    "sha256": "82e8b5ec606d1b6b975e54cc96699bd88fca9892064ca0a3e599a9ca7442c0cf"
-  },
-  {
-    "path": "src/data/pilotAdjust.ts",
-    "size": 1714,
-    "sha256": "7a7710d27898046a36170acfdb139bf5cb4b3efcbf622e14f3c0c05b90f3383c"
-  },
-  {
-    "path": "src/data/pilotSkills.ts",
-    "size": 2041,
-    "sha256": "43fcf355555684b807f83a18e303a9d94b857d647a5aa374b0af7f2d7c5c9dd9"
-  },
-  {
-    "path": "src/data/pilots.ts",
-    "size": 11166,
-    "sha256": "a663e6f95f161b58928b34affcc86c5515f24b9813badddfb59dcff5ad53b3ee"
-  },
-  {
-    "path": "src/data/scenarios.ts",
-    "size": 12936,
-    "sha256": "f90f57eba0c9b6f2f22f279318d94e398bccc2c98b878e58aad59d8bc5891700"
-  },
-  {
-    "path": "src/data/units.ts",
-    "size": 9395,
-    "sha256": "6a81bc26b80b16c8c289b4968665534f7509af4363856cc71248f515bc8aa5e0"
-  },
-  {
-    "path": "src/data/weapons.ts",
-    "size": 19570,
-    "sha256": "159499becf10fc8ba5244cb93d058a9ef0f68b96edeb5ef738c14138af63504a"
-  },
-  {
-    "path": "src/main.tsx",
-    "size": 232,
-    "sha256": "055735c1f2a805ceeca8a1376b884c7a8ae1b9d69ad42753b2d23b4e277bfebb"
-  },
-  {
-    "path": "src/pages/AdminPage.tsx",
-    "size": 13031,
-    "sha256": "b64cf705f6ce262ee9b3575020ea24f830f23b8f789b443dcc7d42813e698826"
-  },
-  {
-    "path": "src/pages/BattlePage.tsx",
-    "size": 5833,
-    "sha256": "ac3d69caec769ffc1c2678b71a2db71d8f3749e01f7fd9de962409c02cd087d4"
-  },
-  {
-    "path": "src/pages/EncyclopediaPage.tsx",
-    "size": 2197,
-    "sha256": "73f7eb0863cb1f94beda4a71215fd943e55fb4f238802a0e04602c9a603f2f21"
-  },
-  {
-    "path": "src/pages/HangarPage.tsx",
-    "size": 3665,
-    "sha256": "506507fc04845f98b079f6df8dc669d8210a26e51ce690c4ff19b720612b7987"
-  },
-  {
-    "path": "src/pages/HomePage.tsx",
-    "size": 2930,
-    "sha256": "b9e36156eb55c28241a338f5c3904ab5a1de20f4cfc253b5808af149c6254939"
-  },
-  {
-    "path": "src/pages/OptionPage.tsx",
-    "size": 1115,
-    "sha256": "33d0f5cc61a9f16ad889a914c3708ca4355e6b9bdd48fb182d8f28db46e8f71c"
-  },
-  {
-    "path": "src/pages/PartsPage.tsx",
-    "size": 2889,
-    "sha256": "9db269dda82fe0595a8b6f45cd8ca50cfcf65476886d341f311ba411a3823ed9"
-  },
-  {
-    "path": "src/pages/PilotPage.tsx",
-    "size": 5672,
-    "sha256": "5dfa16fdaa4b9bd74d1940213fbda5c669d7d59c5194718ef9aec111bf17be1f"
-  },
-  {
-    "path": "src/pages/PvpPage.tsx",
-    "size": 2993,
-    "sha256": "acb7b74d2080c650b59a5934edf46a858253e92feca297a9c6cef9a08c9b4f21"
-  },
-  {
-    "path": "src/pages/RecruitPage.tsx",
-    "size": 2064,
-    "sha256": "5b2ce64d543ee331272948b544522e2560be0f566a638e7b06be33b96e531a5a"
-  },
-  {
-    "path": "src/pages/ScenarioPage.tsx",
-    "size": 2244,
-    "sha256": "b2e04145093ed7c8983e52ac8e63dc8bc5a0955be808e57eefe42d6ef385a279"
-  },
-  {
-    "path": "src/pages/ShopPage.tsx",
-    "size": 1259,
-    "sha256": "00b3c30353ab1c936ac9b54e9de822c78f5385c990dded1944938905d9f5a7d6"
-  },
-  {
-    "path": "src/pages/StartPage.tsx",
-    "size": 4847,
-    "sha256": "ac6597384395b80a69cb1e9b22f9596ad8525ee93201cbab1c7b852016108148"
-  },
-  {
-    "path": "src/pages/TitlePage.tsx",
-    "size": 618,
-    "sha256": "4803ce0de45a241b63ccf9cfbe4ddb0efec6b6955ecaaa726f282d47a3aa71bd"
-  },
-  {
-    "path": "src/pages/TournamentPage.tsx",
-    "size": 7806,
-    "sha256": "b16f5c4aeccf6de3f0edac14a7059daf5204cd7193f05ee66b22e2a3e7e8d5ec"
-  },
-  {
-    "path": "src/pages/UnitListPage.tsx",
-    "size": 1897,
-    "sha256": "fb01c57e4f6db633dffd86311db97386d949bcbe6b147e1a60628e33df4d6736"
-  },
-  {
-    "path": "src/store/gameStore.ts",
-    "size": 35149,
-    "sha256": "8bd83621e5febe5a81151036d1b4b3609213edeed296c50b40e1ff3a2f54f1d1"
-  },
-  {
-    "path": "src/styles.css",
-    "size": 35175,
-    "sha256": "9bf0fed4bd878b019c690b53d3ea4954f7ec79c8265ac85f70e2c91343b5d4c0"
-  },
-  {
-    "path": "src/types/game.ts",
-    "size": 6307,
-    "sha256": "a898643f6dbcd0c43fe3746a65cb00a02781e87ce8837ebe0b7dc94ff7a79cd0"
-  },
-  {
-    "path": "tsconfig.app.json",
-    "size": 507,
-    "sha256": "a7266d1c85fa6947c70073256d9a73e4c459e97b0b4ef24b5c48dcab498ef4c5"
-  },
-  {
-    "path": "tsconfig.json",
-    "size": 119,
-    "sha256": "770b4140bbb581e2dfd9ea9946ffc9c75a1d86ba7d2db5f77c83e37cbdf9d808"
-  },
-  {
-    "path": "tsconfig.node.json",
-    "size": 275,
-    "sha256": "9205a1dff7c69daf9425a897a3a9cd620c0e9d32284a3ecd4a4907691a367b07"
-  },
-  {
-    "path": "vite.config.ts",
-    "size": 150,
-    "sha256": "dde39f59a7a9ebecf0e1e733914389173cd2831aa4571d7dc93beaee75b2d0e2"
-  }
-]
+{
+  "version": "0.9.1",
+  "files": [
+    {
+      "path": ".gitignore",
+      "size": 43,
+      "sha256": "869b81868070b226961721a583e0e11db084e522ce0a7ca47d23c632307d9c2e"
+    },
+    {
+      "path": "FINAL_VALIDATION.md",
+      "size": 1092,
+      "sha256": "45ca0753464957e1e923fedef4df36c2acf343649d7187eecca1d8a6bec3fe83"
+    },
+    {
+      "path": "MIGRATION_STATUS.md",
+      "size": 5346,
+      "sha256": "21431ff30ffaadd2aa25a6a48f13c7b20954d5d13074f6c1209d1a8259ce0bb1"
+    },
+    {
+      "path": "README.md",
+      "size": 2972,
+      "sha256": "a42b781e66409794125d7dfc394e3385049f52755dc04cec0cf5c9136752dc4a"
+    },
+    {
+      "path": "SOURCE_MANIFEST.json",
+      "size": 18572,
+      "sha256": "e9d686f01b5780ff682b984ed72892168f9497081ed114aad099754eace05a74"
+    },
+    {
+      "path": "index.html",
+      "size": 367,
+      "sha256": "a6638fac278b17f109ed88a58d1d2a342d6029ed2c3b57dcdf66e4c79b7093fb"
+    },
+    {
+      "path": "netlify.toml",
+      "size": 120,
+      "sha256": "d434ed07ddd63252f129f1435f2b0ceaa5e926855f66d8491672fbe2cbc9d3ee"
+    },
+    {
+      "path": "package.json",
+      "size": 492,
+      "sha256": "5030833ca18dbb82a8b58927deeda282e6055bd399ab57cb2828d389e069bca1"
+    },
+    {
+      "path": "public/assets/backgrounds/bg-hangar.webp",
+      "size": 68140,
+      "sha256": "a618ab3c15d23f15c311116f02d54181dcc554798feb498b6e961ebf1afe4ed7"
+    },
+    {
+      "path": "public/assets/backgrounds/bg-pilot.webp",
+      "size": 65516,
+      "sha256": "e176ddd4e6fae3a5f793bdb9dff5c01626d0aaab7713f752601fcf66b4c9af7c"
+    },
+    {
+      "path": "public/assets/backgrounds/bg-space.webp",
+      "size": 30750,
+      "sha256": "b5421b1af3cc1d2ff6c34dc9092042ad0d0a04222425735d2dcafdd9d0d965f6"
+    },
+    {
+      "path": "public/assets/enemy_pilots/commander_1.png",
+      "size": 280936,
+      "sha256": "38f2eace684539ee68628c28211bc4fc37f8222ee6ab8751416198885d892c84"
+    },
+    {
+      "path": "public/assets/enemy_pilots/commander_2.png",
+      "size": 284198,
+      "sha256": "ed804b93faa084f862c39de16b4ddac103e6e36861ab711be2ac11dd45a62c57"
+    },
+    {
+      "path": "public/assets/enemy_pilots/commander_3.png",
+      "size": 266153,
+      "sha256": "5c9feace83e26dfa7fbd9543b9be99165402d0afc6ff28f1ef8c1e6fe5d7bab6"
+    },
+    {
+      "path": "public/assets/enemy_pilots/commander_4.png",
+      "size": 248802,
+      "sha256": "1c49310523950726556ba67ed639abaf91906d4d9e8a1595b52c0c889b8f6d5a"
+    },
+    {
+      "path": "public/assets/enemy_pilots/elite_1.png",
+      "size": 225739,
+      "sha256": "307ade46aa9b3977def4475e640d8ded5c9e8ba2d8f03aaa74c43d703ee9df3f"
+    },
+    {
+      "path": "public/assets/enemy_pilots/elite_2.png",
+      "size": 197934,
+      "sha256": "6d85cfd38cea5e58a85ba9ec5d0387780c87bb5dfdffd899169fd1a653f5366b"
+    },
+    {
+      "path": "public/assets/enemy_pilots/elite_3.png",
+      "size": 225955,
+      "sha256": "3a979142c4d41c9855b5ed43f8d1c7902a9d704a9e31f89b2b7fbc56ffca035c"
+    },
+    {
+      "path": "public/assets/enemy_pilots/elite_4.png",
+      "size": 238672,
+      "sha256": "7302d65d3b0a0b8cd9f3c28326c14e77fd0a9e8026b4c420cfbdf858cee008fb"
+    },
+    {
+      "path": "public/assets/enemy_pilots/general_1.png",
+      "size": 177179,
+      "sha256": "b0da19bc29d99f524c91dc9f3e8b8f16cf39cf74bdf247c06a1a092a089ef75e"
+    },
+    {
+      "path": "public/assets/enemy_pilots/general_2.png",
+      "size": 183752,
+      "sha256": "d22c1cd6e4a1e48d17b9e8456947088f1820584e1b6f5588d6ba9f67a2d21ded"
+    },
+    {
+      "path": "public/assets/enemy_pilots/general_3.png",
+      "size": 173131,
+      "sha256": "fd4da2dc8d8c0632f8a4035ee53fbc5f3594795823a19c4efa51561d9babfc1e"
+    },
+    {
+      "path": "public/assets/enemy_pilots/general_4.png",
+      "size": 166699,
+      "sha256": "1ea38986d8a43b005f80250e1fa18f1bd9337256a5b1cbc7619002d018146ce0"
+    },
+    {
+      "path": "public/assets/enemy_units/e_c1.png",
+      "size": 1811788,
+      "sha256": "c8d484868724977cc78498f4cf44d1757776cc2e9ff9c6c9a64c767ec49d1d58"
+    },
+    {
+      "path": "public/assets/enemy_units/e_c2.png",
+      "size": 1890920,
+      "sha256": "bb45fe6a30841b18c9e44d0847e5387f85e047bbcfb87cb843d02778bd8d480e"
+    },
+    {
+      "path": "public/assets/enemy_units/e_e1.png",
+      "size": 1460111,
+      "sha256": "6afd90fd4895ca1b06b363f853669c0778055814c6c21077bd167fae0b36e9f0"
+    },
+    {
+      "path": "public/assets/enemy_units/e_e2.png",
+      "size": 1762008,
+      "sha256": "d76b1c5bb63bbcc9e7a375344be5244ae3c572eefc7dfafa4166c0f7060713de"
+    },
+    {
+      "path": "public/assets/enemy_units/e_e3.png",
+      "size": 1760248,
+      "sha256": "db587596fe039559706cec02848f1d229db415d4caf6d4c79918e47e8cbfbff9"
+    },
+    {
+      "path": "public/assets/enemy_units/e_g1.png",
+      "size": 1433659,
+      "sha256": "bf54d56947c96f832d4d10c35083174f6da8ef58408e0ecac2c74e327b4b6ad1"
+    },
+    {
+      "path": "public/assets/enemy_units/e_g2.png",
+      "size": 1379168,
+      "sha256": "89da119c895ef046b6c7405298161acdf834c6c8d3b3b39e1a89954332f1a3b0"
+    },
+    {
+      "path": "public/assets/enemy_units/e_g3.png",
+      "size": 1275370,
+      "sha256": "8b87fbf785a75b718ce58140fbf7419fb9ea860b1d5a35509da96554ece0980e"
+    },
+    {
+      "path": "public/assets/operators/cecil_fullbody.png",
+      "size": 705668,
+      "sha256": "fcc144ba4bdb22471ef8975737d06b70b1d4c942aa6e8f0c02dfe2437f9975fd"
+    },
+    {
+      "path": "public/assets/operators/cecil_fullbody.webp",
+      "size": 386346,
+      "sha256": "750b6cccee1adf3102b65353258ee92f04e19e9656ba54013187df8661b4f684"
+    },
+    {
+      "path": "public/assets/operators/cecil_portrait.png",
+      "size": 258768,
+      "sha256": "3ff03fb19ea550cc40b2106513a5527c777e51fde56b8b3f3e7b163478229728"
+    },
+    {
+      "path": "public/assets/operators/cecil_portrait.webp",
+      "size": 47198,
+      "sha256": "a59e25a686874ac450c554b4010f7a17619cd481cbbce46111adf42cc9f15024"
+    },
+    {
+      "path": "public/assets/pilots/female_1.webp",
+      "size": 56540,
+      "sha256": "1f0c262bdcc329464f6e9241eceec31acc97ce59b90307f2b4517668db291963"
+    },
+    {
+      "path": "public/assets/pilots/female_2.webp",
+      "size": 59916,
+      "sha256": "98003b85c7afe19347bcf26bacff8edff7d0c7b95a6f36e4d04e5e28ae928181"
+    },
+    {
+      "path": "public/assets/pilots/female_3.webp",
+      "size": 61594,
+      "sha256": "b8e4cee13480fc63a4a88cb1ec84437ab80d7b8e1743f73b12fd7fe06e9830d9"
+    },
+    {
+      "path": "public/assets/pilots/female_4.webp",
+      "size": 63996,
+      "sha256": "8a6c06b33cb1d08ef86651375aac610cdea27c6042d837eacf0d9d9398bd3834"
+    },
+    {
+      "path": "public/assets/pilots/female_5.webp",
+      "size": 59092,
+      "sha256": "a26f4f96430040e454841cccd1e261ffcc5c35580d48582dfd3161fbb05aae47"
+    },
+    {
+      "path": "public/assets/pilots/fullbody/female_1.webp",
+      "size": 218654,
+      "sha256": "90ea40a144f1cb3d2adf8220d6db624eb8bd1b64a6f1bd0dc01b99c03f67f23e"
+    },
+    {
+      "path": "public/assets/pilots/fullbody/female_2.webp",
+      "size": 55748,
+      "sha256": "87d85bccaaf6d56fb4741b0c175eeb0f709b4a242354c2977da790b41d09698f"
+    },
+    {
+      "path": "public/assets/pilots/fullbody/female_3.webp",
+      "size": 297932,
+      "sha256": "0a7ab9c08f88dd3c07737e48c94e58e234667a8a8ed8cd8447ca28f92355396f"
+    },
+    {
+      "path": "public/assets/pilots/fullbody/female_4.webp",
+      "size": 61010,
+      "sha256": "b8f0a87c915dbb7a836e466ecf554f15817931cce8260ae171188b9ab74e0820"
+    },
+    {
+      "path": "public/assets/pilots/fullbody/female_5.webp",
+      "size": 46084,
+      "sha256": "b8f3712ba8261ef3ab208a4707f0253e002fc38815cd5fde9d387b9a81f273f2"
+    },
+    {
+      "path": "public/assets/pilots/fullbody/male_1.webp",
+      "size": 35802,
+      "sha256": "8f06fbf33caab464fe9ae2cd8fde34ed1933fef0bd28f2f30a8c9cda605587ee"
+    },
+    {
+      "path": "public/assets/pilots/fullbody/male_2.webp",
+      "size": 38092,
+      "sha256": "ba451d0e7f06fde7f6508db705b6585c6a22f53458f99600e3f0a929373e0333"
+    },
+    {
+      "path": "public/assets/pilots/fullbody/male_3.webp",
+      "size": 42176,
+      "sha256": "5fb19c9d3aeaf2888227f8232b3c4240caccaea50902832461c92560f1b8faff"
+    },
+    {
+      "path": "public/assets/pilots/fullbody/male_4.webp",
+      "size": 46660,
+      "sha256": "39cea8a53bebfcd25195818177d9867c82df9d2c2af90a8320bfa26582569068"
+    },
+    {
+      "path": "public/assets/pilots/fullbody/male_5.webp",
+      "size": 36184,
+      "sha256": "a2b65acc4039d51d5608d8e7a2d46fe25aae5f02548df89ad2b4647f72398e88"
+    },
+    {
+      "path": "public/assets/pilots/male_1.webp",
+      "size": 49684,
+      "sha256": "cb3bbd95ee74984043c471ec1d8d1525b9560527c0183cd7c8556bd713ce0919"
+    },
+    {
+      "path": "public/assets/pilots/male_2.webp",
+      "size": 56286,
+      "sha256": "08a681e77617926a52db17a28334d4df342fb608e3f2b8ebb1699ba6d9609a88"
+    },
+    {
+      "path": "public/assets/pilots/male_3.webp",
+      "size": 50388,
+      "sha256": "03eedfeee24cf6294de7915a220bee810435825853293044f7064b7f55c8dc3f"
+    },
+    {
+      "path": "public/assets/pilots/male_4.webp",
+      "size": 55946,
+      "sha256": "5eb93ea9055928915a2b4f55b7bca6562c7a9b714cae867d3ddd0fceb72f2484"
+    },
+    {
+      "path": "public/assets/pilots/male_5.webp",
+      "size": 57982,
+      "sha256": "4f5a0ab1298c9505041f8bce3e8c7dbdd9c2b3cf87094f6a362c833e27ad7d36"
+    },
+    {
+      "path": "public/assets/scenario/hero_desert.webp",
+      "size": 35654,
+      "sha256": "7d9a668be5c170317c6ebeb38bfa217ba8033fde9176f4eed819501650d9d8f6"
+    },
+    {
+      "path": "public/assets/scenario/operator_portrait.webp",
+      "size": 12748,
+      "sha256": "096466e5a0f40023917679fa18f14f914ab887fdb974230d4573d6412ac524f3"
+    },
+    {
+      "path": "public/assets/scenario/operator_scene.webp",
+      "size": 109920,
+      "sha256": "28282f48a0c396abecae8c9f3174ef5c3a4279e74f19b7dc3341d0e10b591877"
+    },
+    {
+      "path": "public/assets/scenario/thumb_desert.webp",
+      "size": 10152,
+      "sha256": "58d0a313e443c85103dd5593b3eaddd9b50aaf358fdc739783d116c63a341e01"
+    },
+    {
+      "path": "public/assets/scenario/thumb_moon.webp",
+      "size": 9776,
+      "sha256": "c7b9b9d48bb57596e7e0458f6aca68529ceffae5a53d53ee23fbb99e4e90f0e4"
+    },
+    {
+      "path": "public/assets/scenario/thumb_orbit.webp",
+      "size": 9764,
+      "sha256": "0ebe9877b23e7c7112daf22b0ffb8afd72367d3143cfeb9526fe7d3b3e7b0f09"
+    },
+    {
+      "path": "public/assets/scenario/thumb_rescue.webp",
+      "size": 10236,
+      "sha256": "ddc7a09f59a4eaabd144175218b9124f1a38e51223f887c13da7741dc4b7a115"
+    },
+    {
+      "path": "public/assets/scenario/thumb_shadow.webp",
+      "size": 9476,
+      "sha256": "7ea617be7570fa3a935c523cda48a3ddf0c448959fe20b3ec7949712f031b0d4"
+    },
+    {
+      "path": "public/assets/sortie/cecil_fullbody.png",
+      "size": 705668,
+      "sha256": "fcc144ba4bdb22471ef8975737d06b70b1d4c942aa6e8f0c02dfe2437f9975fd"
+    },
+    {
+      "path": "public/assets/sortie/cecil_portrait.jpg",
+      "size": 327364,
+      "sha256": "74a85018c20e116b7d65b4bcefdc46b6df6869ecca52256fecaed35008835802"
+    },
+    {
+      "path": "public/assets/sortie/cecil_portrait.png",
+      "size": 2000304,
+      "sha256": "f74e3e8429b2ac43754eb00791145d530f6f411807bb8562a017a3c4abae4004"
+    },
+    {
+      "path": "public/assets/sortie/cecil_portrait.webp",
+      "size": 328930,
+      "sha256": "32e9df386aff052d67e397d89953059b414c7f6493e9bbb67003540a99f15cad"
+    },
+    {
+      "path": "public/assets/sortie/hangar.jpg",
+      "size": 421023,
+      "sha256": "16dc018fb7b46a3a6493817b9387461029bab0b8d962738eba8bd627648125bd"
+    },
+    {
+      "path": "public/assets/units/black_creed.png",
+      "size": 1418711,
+      "sha256": "16cde1ab50d4f44ce2cac5a9bd3e3f2b993115bf5895e447bcc8379eedfefc18"
+    },
+    {
+      "path": "public/assets/units/braveblue.png",
+      "size": 1701874,
+      "sha256": "045939be7f1f7e134e9c6b1d090f07aed3899fdfe1f8c1a8a282698ebf0c53ef"
+    },
+    {
+      "path": "public/assets/units/iron_colossus.png",
+      "size": 2360252,
+      "sha256": "e161b38be205ba1ececf5773e7a58c53bdf303299602c46fe80debce7980e504"
+    },
+    {
+      "path": "public/assets/units/maxi_magna.png",
+      "size": 2033614,
+      "sha256": "31aa719e29df7e85f35416ae7639dda622888494bbd7fa1d58fdbcbab5de0003"
+    },
+    {
+      "path": "public/assets/units/seraph.png",
+      "size": 1551008,
+      "sha256": "e668cb74fa0e70468e1d2e9aa640b8a314c9cb83ca1e79dbcde6224caecada4b"
+    },
+    {
+      "path": "public/assets/units/shadow_master.png",
+      "size": 1327404,
+      "sha256": "b1c64a23d67dc176b79540512b8dedf510427ac336b3d0483d1b9fafd98357ed"
+    },
+    {
+      "path": "public/assets/units/titan_braver.png",
+      "size": 1739296,
+      "sha256": "cedf2aced3d7a94f63e6cc7f19a142adde7a201df745eab2190217334d320cb9"
+    },
+    {
+      "path": "public/assets/units/unit_1.webp",
+      "size": 65522,
+      "sha256": "00c4bd3b1eaa5e67d0d2cd28942e0eacdd88e3c29bb4171adaf67d4c9b6a9e90"
+    },
+    {
+      "path": "public/assets/units/unit_2.webp",
+      "size": 62466,
+      "sha256": "c25cd63bc102593fd519424a568e70c0affa80717530992ff0d445824925b74b"
+    },
+    {
+      "path": "public/assets/units/unit_3.webp",
+      "size": 54088,
+      "sha256": "a912aff351c999b7ae9f4becc534b329752c5eb6aaf8fde870cdf4d6376a0355"
+    },
+    {
+      "path": "public/assets/units/unit_4.webp",
+      "size": 80130,
+      "sha256": "6c7bee856adde52fc8f3877e4ae7a1a39b75f5fef50685e8d7948296bd1df5fb"
+    },
+    {
+      "path": "public/assets/units/unit_5.webp",
+      "size": 88220,
+      "sha256": "4c6356daa454bd32d5dfb703efeaf5c4166a311a4184b9c725bd4085989f853a"
+    },
+    {
+      "path": "public/assets/units/unit_6.webp",
+      "size": 74786,
+      "sha256": "e2204891b0ba72df1daa7cbee0a46020bd676a3bc1268f86046190d3579f76a3"
+    },
+    {
+      "path": "public/assets/units/unit_7.webp",
+      "size": 81000,
+      "sha256": "b11550025649432d718e7121ac2bf1ac7a3b9f65f1950d7452b0c0cf00cc7b85"
+    },
+    {
+      "path": "public/assets/units/unit_8.webp",
+      "size": 106502,
+      "sha256": "4b21c8f4511fcd81a6ab6a8a68e142a64ea2a58a7a12110d1b79f71ebdd680c3"
+    },
+    {
+      "path": "public/assets/units/valkyrie_gundam.png",
+      "size": 1468657,
+      "sha256": "ac8abf33f3ed06d91e9a99c894c3c0cbf97e8b890253ee4339c41b6d0075c0c4"
+    },
+    {
+      "path": "src/App.tsx",
+      "size": 1696,
+      "sha256": "92815eb1c1a3f0353d6a459196cb1fcba67f7b3d14c7ea6ebd6e4dddf103705a"
+    },
+    {
+      "path": "src/components/layout/GameLayout.tsx",
+      "size": 3047,
+      "sha256": "f6207591a92516c0805721b4873c310c50017c1762ea9271367129dc4ed8e85e"
+    },
+    {
+      "path": "src/data/battleEngine.ts",
+      "size": 32401,
+      "sha256": "1f611d1b75338e1292dee302073548ff34b03cadbee147cb941d8e38c5f51148"
+    },
+    {
+      "path": "src/data/calculations.ts",
+      "size": 1977,
+      "sha256": "a093ca4e9f3053f6ff5a5db02805fe04256d0b06602831eddc4aaddb926d4819"
+    },
+    {
+      "path": "src/data/enemies.ts",
+      "size": 3944,
+      "sha256": "f90277d3a20b3fd1953737134b1a1f0802db3ad8dfdf4347c74d6b4413cfd2ef"
+    },
+    {
+      "path": "src/data/parts.ts",
+      "size": 8820,
+      "sha256": "82e8b5ec606d1b6b975e54cc96699bd88fca9892064ca0a3e599a9ca7442c0cf"
+    },
+    {
+      "path": "src/data/pilotAdjust.ts",
+      "size": 1714,
+      "sha256": "7a7710d27898046a36170acfdb139bf5cb4b3efcbf622e14f3c0c05b90f3383c"
+    },
+    {
+      "path": "src/data/pilotSkills.ts",
+      "size": 2041,
+      "sha256": "43fcf355555684b807f83a18e303a9d94b857d647a5aa374b0af7f2d7c5c9dd9"
+    },
+    {
+      "path": "src/data/pilots.ts",
+      "size": 11166,
+      "sha256": "a663e6f95f161b58928b34affcc86c5515f24b9813badddfb59dcff5ad53b3ee"
+    },
+    {
+      "path": "src/data/scenarios.ts",
+      "size": 12936,
+      "sha256": "f90f57eba0c9b6f2f22f279318d94e398bccc2c98b878e58aad59d8bc5891700"
+    },
+    {
+      "path": "src/data/units.ts",
+      "size": 9395,
+      "sha256": "6a81bc26b80b16c8c289b4968665534f7509af4363856cc71248f515bc8aa5e0"
+    },
+    {
+      "path": "src/data/weapons.ts",
+      "size": 19570,
+      "sha256": "159499becf10fc8ba5244cb93d058a9ef0f68b96edeb5ef738c14138af63504a"
+    },
+    {
+      "path": "src/main.tsx",
+      "size": 232,
+      "sha256": "055735c1f2a805ceeca8a1376b884c7a8ae1b9d69ad42753b2d23b4e277bfebb"
+    },
+    {
+      "path": "src/pages/AdminPage.tsx",
+      "size": 13031,
+      "sha256": "b64cf705f6ce262ee9b3575020ea24f830f23b8f789b443dcc7d42813e698826"
+    },
+    {
+      "path": "src/pages/BattlePage.tsx",
+      "size": 5833,
+      "sha256": "ac3d69caec769ffc1c2678b71a2db71d8f3749e01f7fd9de962409c02cd087d4"
+    },
+    {
+      "path": "src/pages/EncyclopediaPage.tsx",
+      "size": 2197,
+      "sha256": "73f7eb0863cb1f94beda4a71215fd943e55fb4f238802a0e04602c9a603f2f21"
+    },
+    {
+      "path": "src/pages/HangarPage.tsx",
+      "size": 3837,
+      "sha256": "668d2b6fe27f347f478a43409220a8e069981caa05377dc99a714bf06886f0a7"
+    },
+    {
+      "path": "src/pages/HomePage.tsx",
+      "size": 6374,
+      "sha256": "c0c389e026aee48c1e13ab08b349fa478fb70cbabbd7aba0dc1ac5464f8c0edd"
+    },
+    {
+      "path": "src/pages/OptionPage.tsx",
+      "size": 1115,
+      "sha256": "0ef4445f3ba2233e7fac27e2f29958f6dd301e9b8e7cab214d1d14e16308e9a1"
+    },
+    {
+      "path": "src/pages/PartsPage.tsx",
+      "size": 2889,
+      "sha256": "9db269dda82fe0595a8b6f45cd8ca50cfcf65476886d341f311ba411a3823ed9"
+    },
+    {
+      "path": "src/pages/PilotPage.tsx",
+      "size": 5672,
+      "sha256": "5dfa16fdaa4b9bd74d1940213fbda5c669d7d59c5194718ef9aec111bf17be1f"
+    },
+    {
+      "path": "src/pages/PvpPage.tsx",
+      "size": 2993,
+      "sha256": "acb7b74d2080c650b59a5934edf46a858253e92feca297a9c6cef9a08c9b4f21"
+    },
+    {
+      "path": "src/pages/RecruitPage.tsx",
+      "size": 2064,
+      "sha256": "5b2ce64d543ee331272948b544522e2560be0f566a638e7b06be33b96e531a5a"
+    },
+    {
+      "path": "src/pages/ScenarioPage.tsx",
+      "size": 6916,
+      "sha256": "d2e58efa56ccd51c442c45d1f3bc0422e2b1b41c4ec5221e5a77dda20ffb4aa5"
+    },
+    {
+      "path": "src/pages/ShopPage.tsx",
+      "size": 1259,
+      "sha256": "00b3c30353ab1c936ac9b54e9de822c78f5385c990dded1944938905d9f5a7d6"
+    },
+    {
+      "path": "src/pages/StartPage.tsx",
+      "size": 4847,
+      "sha256": "ac6597384395b80a69cb1e9b22f9596ad8525ee93201cbab1c7b852016108148"
+    },
+    {
+      "path": "src/pages/TitlePage.tsx",
+      "size": 618,
+      "sha256": "4803ce0de45a241b63ccf9cfbe4ddb0efec6b6955ecaaa726f282d47a3aa71bd"
+    },
+    {
+      "path": "src/pages/TournamentPage.tsx",
+      "size": 7806,
+      "sha256": "b16f5c4aeccf6de3f0edac14a7059daf5204cd7193f05ee66b22e2a3e7e8d5ec"
+    },
+    {
+      "path": "src/pages/UnitListPage.tsx",
+      "size": 1409,
+      "sha256": "f9a867edaea2588abfffb0965d11cce0fd7ec50bb2599887f404cba342ee3f60"
+    },
+    {
+      "path": "src/store/gameStore.ts",
+      "size": 35149,
+      "sha256": "8bd83621e5febe5a81151036d1b4b3609213edeed296c50b40e1ff3a2f54f1d1"
+    },
+    {
+      "path": "src/styles.css",
+      "size": 55491,
+      "sha256": "65d6d538da39f05666e02e937d7f976015fff2f5c542e36c0c2a329029a11cb9"
+    },
+    {
+      "path": "src/types/game.ts",
+      "size": 6307,
+      "sha256": "a898643f6dbcd0c43fe3746a65cb00a02781e87ce8837ebe0b7dc94ff7a79cd0"
+    },
+    {
+      "path": "tsconfig.app.json",
+      "size": 507,
+      "sha256": "a7266d1c85fa6947c70073256d9a73e4c459e97b0b4ef24b5c48dcab498ef4c5"
+    },
+    {
+      "path": "tsconfig.json",
+      "size": 119,
+      "sha256": "770b4140bbb581e2dfd9ea9946ffc9c75a1d86ba7d2db5f77c83e37cbdf9d808"
+    },
+    {
+      "path": "tsconfig.node.json",
+      "size": 275,
+      "sha256": "9205a1dff7c69daf9425a897a3a9cd620c0e9d32284a3ecd4a4907691a367b07"
+    },
+    {
+      "path": "vite.config.ts",
+      "size": 150,
+      "sha256": "dde39f59a7a9ebecf0e1e733914389173cd2831aa4571d7dc93beaee75b2d0e2"
+    }
+  ]
+}
