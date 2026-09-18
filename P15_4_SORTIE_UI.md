@@ -1,0 +1,1 @@
+P15.4: Applied approved sortie UI layout directly to the game. Top bar and global navigation are unchanged. Added interactive mission selection, Cecil operator scene, bottom portrait dialogue, mission detail/reward area, and one large sortie button.
