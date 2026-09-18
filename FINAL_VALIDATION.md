@@ -1,4 +1,4 @@
-# React v0.9.2 validation
+# React v0.9.3 validation
 
 ## UI changes
 - Sortie screen now fills the entire remaining main frame: no outer margin/max-width, full width/height grid.
@@ -16,3 +16,6 @@
 
 ## Environment limitation
 Full project `tsc` cannot resolve React/Zustand because node_modules is not installed in this runtime. The modified TSX files were separately parsed/transpiled with the globally available TypeScript compiler to isolate syntax diagnostics.
+
+- sortie column ratio: 20% mission list / 40% overview / 40% operator
+- operator full-body art enlarged to fill the available height

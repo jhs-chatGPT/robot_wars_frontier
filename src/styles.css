@@ -35,15 +35,15 @@
 @media(max-width:850px){.legacy-shell{grid-template-columns:74px 1fr}.legacy-topbar{height:82px;padding:8px 10px}.legacy-logo{min-width:220px}.legacy-logo span{font-size:28px!important}.legacy-system{margin-left:auto}.legacy-system span{display:none}.legacy-sidebar .legacy-nav-head,.legacy-sidebar .sidebar-foot,.legacy-sidebar nav button span:last-child{display:none}.legacy-sidebar nav button{justify-content:center;padding:12px 5px}.legacy-nav-icon{width:auto}.legacy-home-core,.legacy-home-lower{grid-template-columns:1fr}.legacy-notices{display:block}.legacy-quick-menu{height:auto}.legacy-unit-grid{grid-template-columns:1fr}}
 @media(max-width:760px){.sortie-ref{width:calc(100% - 12px);margin:6px;max-width:none}.sortie-headline{padding:16px 12px}.sortie-headline h1{font-size:28px}.sortie-stage{grid-template-columns:minmax(0,1fr) 28%;min-height:0}.sortie-list{grid-column:1/-1;display:flex;flex-direction:row;overflow:auto;max-height:none;padding:12px}.sortie-mission{width:195px}.sortie-detail{padding-left:12px}.sortie-cecil-art{top:5px;height:100%;width:180%;left:-55%;object-position:center top}.sortie-operator-label{display:none}.sortie-info-grid{grid-template-columns:1fr}.sortie-desc{max-width:95%;margin-top:20px}.sortie-hero-copy h2{font-size:23px}.sortie-dialogue{grid-template-columns:85px minmax(0,1fr);min-height:0}.sortie-dialogue-portrait{max-height:200px}.sortie-dialogue-copy p{font-size:12px}.sortie-dialogue-name b{font-size:16px}.sortie-action-wrap{grid-column:1/-1;padding:10px}.sortie-action{min-height:64px}.sortie-reward{gap:9px}.legacy-home{padding:10px}.legacy-home-hero{height:230px;padding:20px}.legacy-home-hero-copy{width:100%}.legacy-home-hero h1{font-size:25px}.legacy-home-hero-unit{width:66%;right:-16%;opacity:.3}.legacy-current-pilot,.legacy-main-unit{grid-template-columns:1fr;height:auto}.legacy-current-pilot>img{height:280px}.legacy-quick-menu{grid-template-columns:1fr 1fr}}
 
-/* v0.9.2 - sortie full-frame + three-column pilot management */
+/* v0.9.3 - sortie 20/40/40 column balance + larger operator */
 .sortie-ref{width:100%;max-width:none;height:100%;max-height:none;margin:0;overflow:hidden;display:grid;grid-template-rows:94px minmax(0,1fr) 142px;background:linear-gradient(90deg,rgba(2,13,27,.48),rgba(2,13,27,.08)),url('/assets/sortie/hangar.jpg') center/cover}
 .sortie-headline{width:100%;min-height:0;height:94px}
-.sortie-stage{min-height:0;height:100%;overflow:hidden;grid-template-columns:260px minmax(0,1fr) 300px}
+.sortie-stage{min-height:0;height:100%;overflow:hidden;grid-template-columns:20% 40% 40%}
 .sortie-list{height:100%;max-height:none;min-height:0;overflow-y:auto}
-.sortie-detail{height:100%;min-height:0;overflow:hidden;display:flex;flex-direction:column;padding-bottom:8px}
-.sortie-hero{min-height:190px;flex:1 1 47%}
-.sortie-info-grid{flex:0 0 auto}.sortie-info{padding:9px 2px}.sortie-reward{padding:10px 3px}
-.sortie-operator{height:100%;overflow:hidden}.sortie-cecil-art{height:calc(100% + 54px)}
+.sortie-detail{height:100%;min-height:0;overflow:hidden;display:flex;flex-direction:column;padding:12px 10px 6px}
+.sortie-hero{min-height:175px;flex:0 0 40%}
+.sortie-info-grid{flex:1 1 auto;min-height:0;align-content:start;column-gap:12px}.sortie-info{padding:7px 2px}.sortie-reward{flex:0 0 auto;padding:7px 3px 5px;gap:9px}
+.sortie-operator{height:100%;overflow:hidden}.sortie-cecil-art{top:auto;bottom:-4%;left:-8%;width:128%;height:118%;object-fit:contain;object-position:center bottom}
 .sortie-dialogue{height:142px;min-height:142px;margin:0;border-left:0;border-right:0;border-bottom:0}
 
 .pilot-management-screen{height:100%;overflow:hidden;padding:14px 16px 16px;display:grid;grid-template-rows:58px minmax(0,1fr);gap:10px}
@@ -71,5 +71,5 @@
 .pilot-training-message{height:34px;display:flex;align-items:center;padding:0 10px;border-top:1px solid #17384b;color:#628697;font-size:9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.pilot-training-message.show{color:#8ee8ff;background:#08202c}
 .pilot-training-locked{grid-row:2/4;min-height:0;display:grid;place-items:center;align-content:center;text-align:center;padding:20px}.pilot-training-lock-icon{font-size:46px;color:#3b8cae}.pilot-training-locked h2{margin:4px 0 6px}.pilot-training-locked p{font-size:11px;line-height:1.6;color:#7899aa}.pilot-training-locked .activate-pilot-btn{font-size:11px;padding:8px 12px}
 
-@media(max-width:1250px){.pilot-three-column{grid-template-columns:175px minmax(270px,32%) minmax(380px,1fr)}.pilot-profile-compact .pilot-profile-copy-react h1{font-size:23px}.sortie-stage{grid-template-columns:240px minmax(0,1fr) 260px}.sortie-dialogue{grid-template-columns:120px minmax(0,1fr) 210px}}
+@media(max-width:1250px){.pilot-three-column{grid-template-columns:175px minmax(270px,32%) minmax(380px,1fr)}.pilot-profile-compact .pilot-profile-copy-react h1{font-size:23px}.sortie-stage{grid-template-columns:20% 40% 40%}.sortie-cecil-art{left:-12%;width:136%;height:116%}.sortie-dialogue{grid-template-columns:120px minmax(0,1fr) 210px}}
 @media(max-width:980px){.pilot-management-screen{overflow:auto}.pilot-three-column{height:auto;grid-template-columns:180px minmax(0,1fr);overflow:visible}.pilot-column-list{min-height:520px}.pilot-column-info{min-height:520px}.pilot-training-workspace{grid-column:1/-1;height:520px}.sortie-ref{overflow:auto;display:block}.sortie-headline,.sortie-dialogue{height:auto}.sortie-stage{height:auto}}
