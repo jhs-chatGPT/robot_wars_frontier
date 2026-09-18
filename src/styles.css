@@ -73,3 +73,59 @@
 
 @media(max-width:1250px){.pilot-three-column{grid-template-columns:175px minmax(270px,32%) minmax(380px,1fr)}.pilot-profile-compact .pilot-profile-copy-react h1{font-size:23px}.sortie-stage{grid-template-columns:20% 40% 40%}.sortie-cecil-art{left:-12%;width:136%;height:116%}.sortie-dialogue{grid-template-columns:120px minmax(0,1fr) 210px}}
 @media(max-width:980px){.pilot-management-screen{overflow:auto}.pilot-three-column{height:auto;grid-template-columns:180px minmax(0,1fr);overflow:visible}.pilot-column-list{min-height:520px}.pilot-column-info{min-height:520px}.pilot-training-workspace{grid-column:1/-1;height:520px}.sortie-ref{overflow:auto;display:block}.sortie-headline,.sortie-dialogue{height:auto}.sortie-stage{height:auto}}
+
+
+/* v0.9.4 - sortie 20/50/30 balance, operator face-safe fit, larger typography */
+.sortie-stage{grid-template-columns:20% 50% 30%}
+.sortie-headline h1{font-size:37px}.sortie-headline h1 span{font-size:15px}.sortie-headline p{font-size:13px}.sortie-headline-tag{font-size:10px}
+.sortie-mission{padding:13px}.sortie-mission small{font-size:12px}.sortie-mission b{font-size:19px}.sortie-mission em{font-size:13px}.sortie-mission .new{font-size:10px}
+.sortie-hero-copy small{font-size:11px}.sortie-hero-copy h2{font-size:30px}.sortie-hero-copy .sub{font-size:12px}.sortie-desc{font-size:14px;line-height:1.6}
+.sortie-info{grid-template-columns:25px 1fr;gap:9px;padding:8px 2px}.sortie-info .ico{font-size:24px}.sortie-info small{font-size:11px}.sortie-info b{font-size:14px;line-height:1.65}.sortie-reward b{font-size:14px}.sortie-reward small{font-size:10px}.sortie-reward span{font-size:14px}
+.sortie-operator{height:100%;overflow:hidden}.sortie-cecil-art{top:0;bottom:auto;left:-13%;width:126%;height:110%;object-fit:contain;object-position:center top;opacity:.96}
+.sortie-operator-label{right:14px;bottom:18px}.sortie-operator-label b{font-size:15px}.sortie-operator-label small{font-size:10px}
+.sortie-dialogue{background:transparent;box-shadow:none;border-top:1px solid #77cfff;border-bottom:1px solid #3581ae}
+.sortie-dialogue-copy{padding:14px 16px;text-shadow:0 2px 4px rgba(0,8,18,.9)}.sortie-dialogue-name b{font-size:20px}.sortie-dialogue-name small{font-size:11px}.sortie-dialogue-copy p{font-size:14px;line-height:1.65;color:#eaf7ff}.sortie-action{font-size:28px}
+@media(max-width:1250px){.sortie-stage{grid-template-columns:20% 50% 30%}.sortie-cecil-art{top:0;left:-18%;width:136%;height:108%;object-position:center top}}
+
+/* v0.9.5 - keep the full operator body completely inside the sortie frame */
+.sortie-operator{
+  position:relative;
+  height:100%;
+  min-height:0;
+  overflow:hidden;
+}
+.sortie-cecil-art{
+  position:absolute;
+  inset:0;
+  display:block;
+  width:100%;
+  height:100%;
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+  object-position:center bottom;
+  opacity:.96;
+  transform:none;
+}
+@media(max-width:1250px){
+  .sortie-cecil-art{
+    inset:0;
+    width:100%;
+    height:100%;
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
+    object-position:center bottom;
+  }
+}
+@media(max-width:760px){
+  .sortie-cecil-art{
+    inset:0;
+    width:100%;
+    height:100%;
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
+    object-position:center bottom;
+  }
+}
