@@ -1,32 +1,32 @@
-# React v0.9.9 validation
+# React v0.9.10 validation
 
-## v0.9.9 UI changes
-- Reworked the shared TOP HUD and left navigation into the new ROBOT WARS FRONTIER metallic/cyan command UI.
-- Rebuilt Home as a command dashboard: commander profile, main unit, next operation, quick shortcuts, news, event, and daily mission panels.
-- Rebuilt Pilot Management around the same visual system.
-- Removed the `지휘` pilot stat from the TypeScript stat model, pilot templates, enemy stat generation, and hit calculation.
-- Legacy saves that still contain `command` are normalized to the six-stat structure when loaded.
-- Pilot stats are now `격투 / 사격 / 반응 / 조종 / 방어 / 기량`.
-- Renamed the training concept to `특수능력` and replaced the inline skill grid with a dedicated acquisition/upgrade modal.
-- The special-ability modal shows availability, current Lv, next Lv/MAX, description, type/category, and PP cost.
-- Levelled abilities such as 뉴타입, 강화인간, 저력, 인파이트, 건파이트, 원호공격, 원호방어 now read their stored Lv in battle calculations.
+## 목적
+v0.9.9에서 신규 HUD를 실제 화면에 적용한 뒤 확인된 축소감, 과도한 빈 공간, 메뉴 간 UI 밀도 불일치를 수정하는 안정화 핫픽스입니다.
 
-## CSS isolation checks
-- New v0.9.9 visual rules are grouped under `.rwf-*` classes.
-- The new HUD uses `.rwf-shell`, `.rwf-topbar`, and `.rwf-sidebar`; content styles use `.rwf-home-*` and `.rwf-pilot-*`.
-- No new generic `div`, `.panel`, `.sortie-*`, `.hangar-*`, or other broad page selector was introduced by the v0.9.9 block.
-- CSS opening/closing braces: balanced (1160 / 1160).
-- CSS `/assets` references checked: 3 references, 0 missing files.
+## v0.9.10 UI 변경
+- TOP HUD 높이와 로고/자원 패널 비율을 확대했습니다.
+- 좌측 메뉴 폭, 아이콘, 글자, 메뉴 행 높이를 실사용 해상도 기준으로 다시 맞췄습니다.
+- 홈 화면은 지휘관 / 주력 기체 / 다음 작전 중심으로 밀도를 높이고, 하단 바로가기/공지/이벤트/임무 패널의 글자 크기를 정상화했습니다.
+- 파일럿 관리 화면은 목록 / 정보 / 훈련의 글자와 행 크기를 확대했습니다.
+- 파일럿 지휘 능력치 삭제와 특수능력 습득/강화 모달 기능은 그대로 유지됩니다.
+- 영입 / 기체 목록 / 기체 개발 / 강화파츠 / 상점 / 도감 / PvP / 대회 / 관리자 / 설정 / 전투 / 작전 출격 화면을 페이지별 범위로 보정했습니다.
 
-## TypeScript checks
-- All 31 `.ts/.tsx` source files parsed with TypeScript `transpileModule`: 0 syntax errors.
-- Whole `src` semantic check was run with temporary React/Zustand type shims because `node_modules` is unavailable in this runtime: 0 project-code type errors.
-- Temporary validation shims were removed after the check.
+## CSS 영향 범위
+- 최종 안정화 규칙은 `.rwf-shell` 또는 `.rwf-shell[data-page="..."]` 아래로 제한했습니다.
+- 페이지별 세부 조정은 `data-page`를 사용해 다른 화면의 일반 div로 전파되지 않도록 했습니다.
+- 작전 출격, 기체 개발, 강화파츠의 내부 기능 구조는 변경하지 않았습니다.
+- CSS 여는/닫는 괄호: 1293 / 1293
+- CSS `/assets` 참조: 3개, 누락 0개
 
-## Data compatibility
-- Pilot templates contain no `command` stat field.
-- `normalizePilot()` strips legacy `command` from old saves and rebuilds the current six-stat shape.
-- Existing special ability strings such as `뉴타입 Lv1`, `저력 Lv3`, and plain one-level abilities remain compatible.
+## TypeScript
+- 전체 `src`의 `.ts/.tsx` 31개 파일을 TypeScript `transpileModule`로 검사: 구문 오류 0건.
+- v0.9.10은 UI 안정화 중심이며 v0.9.9의 지휘 삭제/특수능력 모달 데이터 구조를 유지합니다.
+- 레거시 `stats.command`는 저장 데이터 정규화용 코드에서만 읽고 현재 6능력 구조에는 포함하지 않습니다.
 
-## Environment limitation
-A real Vite production build cannot be run in this runtime because project `node_modules` are not installed and external package installation is unavailable. Source-level syntax, semantic typing, CSS integrity, and asset-reference validation passed as described above.
+## 해상도 기준
+- 주 기준: 1536×1024 이상 데스크톱
+- 1500px 이하: 사이드바/그리드 단계 축소
+- 1220px 이하: 아이콘형 사이드바 및 다단 레이아웃 전환
+
+## 환경 제한
+현재 런타임에는 프로젝트 `node_modules`가 없어 실제 Vite production build를 수행하지 못했습니다. TypeScript 구문, CSS 구조, 에셋 참조를 검증했습니다.

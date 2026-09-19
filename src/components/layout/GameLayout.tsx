@@ -49,7 +49,7 @@ export function GameLayout({ children }: { children: ReactNode }) {
           {battle && <button className="rwf-battle-chip" onClick={() => setPage('battle')}>BATTLE W{battle.activeWave}</button>}
           <button aria-label="홈" onClick={() => setPage('home')}>⌂</button>
           <button aria-label="설정" onClick={() => setPage('option')}>⚙</button>
-          <small>v0.9.9</small>
+          <small>v0.9.10</small>
         </div>
       </header>
 
@@ -66,7 +66,7 @@ export function GameLayout({ children }: { children: ReactNode }) {
           <span className="rwf-sidebar-emblem">▽</span>
           <b>E.F. FORCE</b>
           <small>A SAFE TOMORROW<br/>FOR ALL HUMANITY.</small>
-          <em>React v0.9.9</em>
+          <em>React v0.9.10</em>
         </div>
       </aside>
 
