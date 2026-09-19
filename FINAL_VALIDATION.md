@@ -1,28 +1,31 @@
-# React v0.9.5 validation
+# React v0.9.8 validation
 
 ## UI changes
-- Sortie screen now fills the entire remaining main frame: no outer margin/max-width, full width/height grid.
-- Pilot management is now a fixed three-column layout: Pilot List | Pilot Information | Training.
-- Pilot training uses tabs instead of vertical stacking: Parameters / Terrain / Special Skills.
-- Parameter training uses a 2-column grid and has no training-area scrollbar.
-- Terrain training uses a 2x2 grid and has no training-area scrollbar.
-- Special skills show 8 items per page with previous/next paging, avoiding a training-area scrollbar as the skill catalog grows.
+- Menu/content surfaces are unified to opaque dark-blue panels while button backgrounds are intentionally unchanged.
+- Surface overrides are page-scoped with `.legacy-shell[data-page="..."]` selectors to prevent cross-screen CSS leakage.
+- The sortie operator dialogue remains transparent by explicit earlier design choice.
+- Pilot management keeps `Pilot List | Pilot Information | Training`, with training unified into one screen instead of tabs.
+- Pilot training layout now uses 7 compact parameter rows, 4 terrain cells, and 4 special-skill cards per page.
 
-## Static validation
-- PilotPage.tsx TypeScript/JSX syntax diagnostics: 0 errors.
-- ScenarioPage.tsx TypeScript/JSX syntax diagnostics: 0 errors.
+## CSS isolation checks
 - CSS opening/closing braces: balanced.
-- CSS /assets references introduced by this UI change: all present.
+- New v0.9.8 menu selectors: all page-scoped; unscoped page selectors: 0.
+- Generic global `.panel`, `.screen-scroll`, `.sortie-stage`, and generic `div` rules were not modified by v0.9.8.
+- Buttons were excluded from the new opacity overrides.
+
+## Syntax checks
+- `src/pages/PilotPage.tsx`: TypeScript/JSX transpile diagnostics 0 errors.
+- `src/components/layout/GameLayout.tsx`: TypeScript/JSX transpile diagnostics 0 errors.
 
 ## Environment limitation
-Full project `tsc` cannot resolve React/Zustand because node_modules is not installed in this runtime. The modified TSX files were separately parsed/transpiled with the globally available TypeScript compiler to isolate syntax diagnostics.
+Full `tsc -b` cannot resolve React/Zustand/Vite modules because `node_modules` is not installed in this runtime. The resulting full-project diagnostics are dependency-resolution errors; the modified TSX files were separately parsed/transpiled with the globally available TypeScript compiler.
 
-- sortie column ratio: 20% mission list / 50% overview / 30% operator
-- operator full-body art is top-anchored so the face remains visible; extra scale is allowed only toward the lower edge
-- sortie typography increased slightly for mission list, overview, rewards, operator label, and dialogue
-- operator dialogue panel background fill removed; borders and opaque text remain for readability
 
-## v0.9.5 sortie operator containment
-- Sortie column ratio remains 20 / 50 / 30.
-- Cecil full-body art is constrained to the operator panel with width/height/max-width/max-height 100% and object-fit: contain.
-- No top or bottom cropping is permitted; transparent spare space is preferred over clipping.
+## CSS refactor (v0.9.8)
+- Repeated selector contexts: **54 → 11**.
+- Extra repeated rule occurrences: **63 → 12**.
+- v0.9.3~v0.9.5 sortie patch history consolidated into one final 20/50/30 rule set.
+- Removed CSS for obsolete pilot training tabs / former stat-card layout that no longer exists in JSX.
+- Remaining duplicate selectors are intentional theme/override layers (`.panel`, `.legacy-panel`, topbar/sidebar, pilot page overrides).
+- CSS parser errors: **0**.
+- Sortie final-style equivalence checked at **1920 / 1280 / 1100 / 980 / 760px**: **0 mismatches** for core sortie selectors.

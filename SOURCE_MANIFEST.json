@@ -1,5 +1,5 @@
 {
-  "version": "0.9.3",
+  "version": "0.9.8",
   "files": [
     {
       "path": ".gitignore",
@@ -7,19 +7,24 @@
       "sha256": "869b81868070b226961721a583e0e11db084e522ce0a7ca47d23c632307d9c2e"
     },
     {
+      "path": "CSS_REFACTOR_REPORT.md",
+      "size": 1194,
+      "sha256": "b1e9dd7c9f01cdf2a0234d8633337cd1f6cfa59c9ff1ad96b8f04e1553fc12d9"
+    },
+    {
       "path": "FINAL_VALIDATION.md",
-      "size": 1278,
-      "sha256": "aa9384e0285f5319332fa6772467b62cab749a281eac0b9a678a0c545d4c904b"
+      "size": 2014,
+      "sha256": "a34acd5068403f01de501bac46f64c42cafb540212982381051d9c240c1d98bc"
     },
     {
       "path": "MIGRATION_STATUS.md",
       "size": 5346,
-      "sha256": "be3629a79ce4f2d0460e7af50c570db4536e14f466600746238f4f056e4316e4"
+      "sha256": "702bcdc9f775c6f6d3510718bbe80f839e6661ea9b33590c96dd02014312e9ad"
     },
     {
       "path": "README.md",
       "size": 2972,
-      "sha256": "083bc4565889629544e227d957164eade3898749401edb350a6d6817fae8b1a3"
+      "sha256": "77aa06cfd6b3e236e9a5ee0a547861c6a86b4f170be2f20115c0fe4b85f3f96d"
     },
     {
       "path": "index.html",
@@ -34,7 +39,7 @@
     {
       "path": "package.json",
       "size": 492,
-      "sha256": "806f3406caa81dea83e3f6484b6674d9a3586bf4e8be96be4ca3e2c2114ab3e7"
+      "sha256": "a9441ce87e52f98f1e10c16cba3cc0e99d4190d907294dfb9c5814a1d895c95a"
     },
     {
       "path": "public/assets/backgrounds/bg-hangar.webp",
@@ -424,7 +429,7 @@
     {
       "path": "src/components/layout/GameLayout.tsx",
       "size": 3047,
-      "sha256": "5e037a08e80ef9f04ff15b5a7ed5933c69ced9070174cd73f83bcc694e975144"
+      "sha256": "e0befed926494a0851072e98ac5f15fee83ae1519ff918b7326ca397bfeb885a"
     },
     {
       "path": "src/data/battleEngine.ts",
@@ -518,8 +523,8 @@
     },
     {
       "path": "src/pages/PilotPage.tsx",
-      "size": 9652,
-      "sha256": "7f00f2b8ccd9c217562eb5b8250bccd86c075e8d62f6c5e8c2df6a8028f529a3"
+      "size": 9867,
+      "sha256": "8f2e1a6bdf9d1e6b28b2c4f41198354f0c149e7eb48625eabcf2945b8bc7ee1a"
     },
     {
       "path": "src/pages/PvpPage.tsx",
@@ -568,8 +573,8 @@
     },
     {
       "path": "src/styles.css",
-      "size": 64625,
-      "sha256": "550e7431c51a22b4fb25a4615b7fac159fa447d764f61835165f447f68a3b355"
+      "size": 88051,
+      "sha256": "00396704895372876b1bb5b6cc232efa3b58975a76b91657f3758615a33dbba5"
     },
     {
       "path": "src/types/game.ts",

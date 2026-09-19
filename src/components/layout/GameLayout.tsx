@@ -38,7 +38,7 @@ export function GameLayout({ children }: { children: ReactNode }) {
         <div className="legacy-system">
           {battle && <button className="legacy-battle-chip" onClick={() => setPage('battle')}>전투 W{battle.activeWave}</button>}
           <button className="legacy-gear" aria-label="설정" onClick={() => setPage('option')}>⚙</button>
-          <span>Ver React v0.9.5</span><span>UC.0087&nbsp;&nbsp;04/12&nbsp;&nbsp;14:25</span>
+          <span>Ver React v0.9.8</span><span>UC.0087&nbsp;&nbsp;04/12&nbsp;&nbsp;14:25</span>
         </div>
       </header>
       <aside className="sidebar legacy-sidebar">
@@ -51,7 +51,7 @@ export function GameLayout({ children }: { children: ReactNode }) {
             </button>
           ))}
         </nav>
-        <div className="sidebar-foot">ROBOT WARS : FRONTIER<br/><span>TACTICAL SYSTEM UI</span><br/><b>React v0.9.5</b></div>
+        <div className="sidebar-foot">ROBOT WARS : FRONTIER<br/><span>TACTICAL SYSTEM UI</span><br/><b>React v0.9.8</b></div>
       </aside>
       <main className="main-stage legacy-main-stage">{children}</main>
     </div>
