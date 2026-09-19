@@ -18,7 +18,6 @@ export type PilotStats = {
   control: number;
   defense: number;
   skill: number;
-  command: number;
 };
 
 export type Terrain = Record<TerrainKey, string>;

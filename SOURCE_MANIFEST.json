@@ -1,5 +1,5 @@
 {
-  "version": "0.9.8",
+  "version": "0.9.9",
   "files": [
     {
       "path": ".gitignore",
@@ -13,18 +13,18 @@
     },
     {
       "path": "FINAL_VALIDATION.md",
-      "size": 2014,
-      "sha256": "a34acd5068403f01de501bac46f64c42cafb540212982381051d9c240c1d98bc"
+      "size": 2447,
+      "sha256": "b805a038271699a56e819860a0f45743b130060f0681a425e340112bd33e6d25"
     },
     {
       "path": "MIGRATION_STATUS.md",
-      "size": 5346,
-      "sha256": "702bcdc9f775c6f6d3510718bbe80f839e6661ea9b33590c96dd02014312e9ad"
+      "size": 5638,
+      "sha256": "beedbbe3538849b069af2f985a1e7748e0232e099fa1385beaac118657eabaed"
     },
     {
       "path": "README.md",
-      "size": 2972,
-      "sha256": "77aa06cfd6b3e236e9a5ee0a547861c6a86b4f170be2f20115c0fe4b85f3f96d"
+      "size": 3070,
+      "sha256": "18aafd17c6b290412fd0c420f2bf4c9a9d0d0c3f90916ec542d3e000ccc5cc6c"
     },
     {
       "path": "index.html",
@@ -39,7 +39,7 @@
     {
       "path": "package.json",
       "size": 492,
-      "sha256": "a9441ce87e52f98f1e10c16cba3cc0e99d4190d907294dfb9c5814a1d895c95a"
+      "sha256": "a098835a50e2cadc6c0425f7a6f262b4e8a9921e946aef5d2c6a9eec84a93752"
     },
     {
       "path": "public/assets/backgrounds/bg-hangar.webp",
@@ -428,13 +428,13 @@
     },
     {
       "path": "src/components/layout/GameLayout.tsx",
-      "size": 3047,
-      "sha256": "e0befed926494a0851072e98ac5f15fee83ae1519ff918b7326ca397bfeb885a"
+      "size": 3505,
+      "sha256": "df6ca8d8f8f2e1728f1f229d6b6b221183976ee311319147b4c24f4e10b11520"
     },
     {
       "path": "src/data/battleEngine.ts",
-      "size": 32401,
-      "sha256": "1f611d1b75338e1292dee302073548ff34b03cadbee147cb941d8e38c5f51148"
+      "size": 33147,
+      "sha256": "3398f578a48e067b555bca0b8035a90f9c1af46f5c1ce5b42c7905f5bc054fae"
     },
     {
       "path": "src/data/calculations.ts",
@@ -453,18 +453,18 @@
     },
     {
       "path": "src/data/pilotAdjust.ts",
-      "size": 1714,
-      "sha256": "7a7710d27898046a36170acfdb139bf5cb4b3efcbf622e14f3c0c05b90f3383c"
+      "size": 1690,
+      "sha256": "785d16f6ed98e47332e05215830aef5634e4c723730c39390a7b043996a3cb49"
     },
     {
       "path": "src/data/pilotSkills.ts",
-      "size": 2041,
-      "sha256": "43fcf355555684b807f83a18e303a9d94b857d647a5aa374b0af7f2d7c5c9dd9"
+      "size": 7121,
+      "sha256": "4561a448383810fadaa816554407cffba23c1dde9d346458b30ac6739af2df2b"
     },
     {
       "path": "src/data/pilots.ts",
-      "size": 11166,
-      "sha256": "a663e6f95f161b58928b34affcc86c5515f24b9813badddfb59dcff5ad53b3ee"
+      "size": 10946,
+      "sha256": "a3bb6be0bab253518e9aec4509b14f0486e9d33bd53053726ffbd50960012cc3"
     },
     {
       "path": "src/data/scenarios.ts",
@@ -508,8 +508,8 @@
     },
     {
       "path": "src/pages/HomePage.tsx",
-      "size": 6374,
-      "sha256": "c0c389e026aee48c1e13ab08b349fa478fb70cbabbd7aba0dc1ac5464f8c0edd"
+      "size": 7956,
+      "sha256": "49b25d6ac3d9029302cb228a4ee548d5001d0accbffa9624208978f27211a596"
     },
     {
       "path": "src/pages/OptionPage.tsx",
@@ -523,8 +523,8 @@
     },
     {
       "path": "src/pages/PilotPage.tsx",
-      "size": 9867,
-      "sha256": "8f2e1a6bdf9d1e6b28b2c4f41198354f0c149e7eb48625eabcf2945b8bc7ee1a"
+      "size": 13213,
+      "sha256": "0a459091d14edeaf853c62d89051b2298e2544a6f2f728a77a89c51f57357963"
     },
     {
       "path": "src/pages/PvpPage.tsx",
@@ -568,18 +568,18 @@
     },
     {
       "path": "src/store/gameStore.ts",
-      "size": 35149,
-      "sha256": "8bd83621e5febe5a81151036d1b4b3609213edeed296c50b40e1ff3a2f54f1d1"
+      "size": 36621,
+      "sha256": "6006bbb6b76c2f627d7d7cd6bcb8c6ae886d5450e4dce10a92e90bcb379a60de"
     },
     {
       "path": "src/styles.css",
-      "size": 88051,
-      "sha256": "00396704895372876b1bb5b6cc232efa3b58975a76b91657f3758615a33dbba5"
+      "size": 116606,
+      "sha256": "3e5e523817b2a5a23d57408c693fb36e5eda369a5841fcf2461e5e41641c7496"
     },
     {
       "path": "src/types/game.ts",
-      "size": 6307,
-      "sha256": "a898643f6dbcd0c43fe3746a65cb00a02781e87ce8837ebe0b7dc94ff7a79cd0"
+      "size": 6288,
+      "sha256": "5632d4e4d7cabfc137f0479f75b6d212c2f3cb559a0692a80d26b343b7398925"
     },
     {
       "path": "tsconfig.app.json",

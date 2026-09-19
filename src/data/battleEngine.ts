@@ -89,7 +89,6 @@ function makeEnemyPilot(level: number, rank: EnemyRank, profileIndex: number, un
       control: base + roleBias,
       defense: base + (profile.ai === '방어형' ? 15 : 5),
       skill: base + (rank === 'commander' ? 14 : rank === 'elite' ? 8 : 1),
-      command: base + (rank === 'commander' ? 18 : 0),
     },
     terrain: { air: 'A', land: 'A', water: 'B', space: 'A' },
     special: [...rankInfo.special, ...profile.special],
@@ -252,6 +251,15 @@ function hasSkill(combatant: Combatant, fragment: string) {
   return hasSkillName(combatant.pilot.special, fragment);
 }
 
+function skillLevel(combatant: Combatant, name: string) {
+  const prefix = `${name} Lv`;
+  const entry = combatant.pilot.special.find((item) => item === name || item.startsWith(prefix));
+  if (!entry) return 0;
+  if (entry === name) return 1;
+  const value = Number(entry.slice(prefix.length));
+  return Number.isFinite(value) ? value : 1;
+}
+
 function moraleCap(combatant: Combatant) {
   return hasSkill(combatant, '기력한계돌파') ? 170 : 150;
 }
@@ -262,9 +270,10 @@ function passiveCombatMods(combatant: Combatant, defending = false) {
   let damage = 1;
   let guard = 1;
   const ratio = combatant.hp / Math.max(1, combatant.maxHp);
-  if (hasSkill(combatant, '뉴타입 Lv2')) { hit += 10; evade += 10; }
-  else if (hasSkill(combatant, '뉴타입')) { hit += 8; evade += 8; }
-  if (hasSkill(combatant, '강화인간')) { hit += 6; evade += 5; }
+  const newtypeLevel = skillLevel(combatant, '뉴타입');
+  if (newtypeLevel) { hit += Math.min(16, 6 + newtypeLevel * 2); evade += Math.min(16, 6 + newtypeLevel * 2); }
+  const enhancedLevel = skillLevel(combatant, '강화인간');
+  if (enhancedLevel) { hit += Math.min(13, 4 + enhancedLevel); evade += Math.min(12, 3 + enhancedLevel); }
   if (hasSkill(combatant, '초감각')) { hit += 4; evade += 4; }
   if (hasSkill(combatant, '코디네이터')) { hit += 4; evade += 3; damage *= 1.03; }
   if (hasSkill(combatant, '천재')) { hit += 5; evade += 5; }
@@ -278,15 +287,16 @@ function passiveCombatMods(combatant: Combatant, defending = false) {
   if (hasSkill(combatant, '분석지원')) { hit += 4; damage *= 1.02; }
   if (hasSkill(combatant, '리더십')) { hit += 2; damage *= 1.02; }
   if (hasSkill(combatant, '전술 지휘')) { hit += 4; evade += 2; damage *= 1.02; }
-  if (hasSkill(combatant, '지휘관 Lv2')) { hit += 4; evade += 3; damage *= 1.03; }
-  else if (hasSkill(combatant, '지휘관 Lv1')) { hit += 2; evade += 1; damage *= 1.015; }
+  const commanderLevel = skillLevel(combatant, '지휘관');
+  if (commanderLevel) { hit += Math.min(6, 1 + commanderLevel * 2); evade += Math.min(5, commanderLevel + 1); damage *= 1 + Math.min(0.05, commanderLevel * 0.015); }
   if (hasSkill(combatant, '간파') && combatant.morale >= 120) { hit += 6; evade += 6; }
   if ((hasSkill(combatant, '저력') || combatant.abilities.includes('저력 보조')) && ratio <= 0.35) {
-    const level = hasSkill(combatant, '저력 Lv3') ? 3 : hasSkill(combatant, '저력 Lv2') ? 2 : 1;
-    hit += 7 + level * 2; evade += 3 + level; damage *= 1.08 + level * 0.03; guard *= Math.max(0.78, 0.94 - level * 0.04);
+    const level = Math.max(1, skillLevel(combatant, '저력'));
+    hit += 7 + Math.min(18, level * 2); evade += 3 + Math.min(9, level); damage *= 1.08 + Math.min(0.18, level * 0.02); guard *= Math.max(0.7, 0.94 - level * 0.025);
   }
   if (hasSkill(combatant, '가드')) guard *= 0.9;
-  if (hasSkill(combatant, '원호방어') && defending) guard *= 0.95;
+  const supportDefenseLevel = skillLevel(combatant, '원호방어');
+  if (supportDefenseLevel && defending) guard *= Math.max(0.88, 0.98 - supportDefenseLevel * 0.025);
   if (hasSkill(combatant, '투지')) damage *= 1.05;
   if (hasSkill(combatant, '브레이브하트') && ratio <= 0.5) { damage *= 1.06; guard *= 0.9; }
   if (hasSkill(combatant, '철벽')) guard *= 0.88;
@@ -300,8 +310,7 @@ function calcHit(attacker: Combatant, defender: Combatant, weapon: WeaponTemplat
   const defenderMods = passiveCombatMods(defender, true);
   const pilotDelta = (attackStat - defender.pilot.stats.reaction) * 0.075
     + (attacker.pilot.stats.control - defender.pilot.stats.reaction) * 0.085
-    + (attacker.pilot.stats.skill - defender.pilot.stats.skill) * 0.05
-    + (attacker.pilot.stats.command - defender.pilot.stats.command) * 0.025;
+    + (attacker.pilot.stats.skill - defender.pilot.stats.skill) * 0.05;
   const machineDelta = (attacker.aim - defender.mobility) * 0.12;
   const terrainDelta = (rankIndex(attacker.pilot.terrain[battle.terrain]) - rankIndex(defender.pilot.terrain[battle.terrain])) * 3;
   let rangeMod = 0;
@@ -324,9 +333,12 @@ function calcDamage(attacker: Combatant, defender: Combatant, weapon: WeaponTemp
   const attackerMods = passiveCombatMods(attacker);
   const defenderMods = passiveCombatMods(defender, true);
   let damageMod = attackerMods.damage;
-  if (hasSkill(attacker, '인파이트') && weapon.type === '근접') damageMod *= 1.08;
-  if (hasSkill(attacker, '건파이트') && weapon.type === '원거리') damageMod *= 1.08;
-  if (hasSkill(attacker, '원호공격')) damageMod *= 1.04;
+  const inFightLevel = skillLevel(attacker, '인파이트');
+  const gunFightLevel = skillLevel(attacker, '건파이트');
+  const supportAttackLevel = skillLevel(attacker, '원호공격');
+  if (inFightLevel && weapon.type === '근접') damageMod *= 1 + Math.min(0.14, 0.05 + inFightLevel * 0.03);
+  if (gunFightLevel && weapon.type === '원거리') damageMod *= 1 + Math.min(0.14, 0.05 + gunFightLevel * 0.03);
+  if (supportAttackLevel) damageMod *= 1 + Math.min(0.07, 0.025 + supportAttackLevel * 0.012);
   if (hasSkill(attacker, '강습') && weapon.type === '근접') damageMod *= 1.06;
   const raw = weapon.power * attacker.weaponPct + attackStat * 7 + attacker.morale * 5;
   const reduction = defender.armor * 1.08 + defender.pilot.stats.defense * 5;
@@ -639,7 +651,7 @@ export function makeSystemOpponent(me: PlayerPilot, index = 0): PlayerPilot {
     exp: 0,
     sp: 50,
     maxSp: 50,
-    stats: { melee: base + 4, ranged: base + 6, reaction: base + 3, control: base + 5, defense: base + 4, skill: base + 5, command: base },
+    stats: { melee: base + 4, ranged: base + 6, reaction: base + 3, control: base + 5, defense: base + 4, skill: base + 5 },
     special: level >= 60 ? ['에이스 파일럿', '간파'] : level >= 25 ? ['에이스 파일럿'] : ['기초 전투 훈련'],
     unitId: unit.id,
     ownedUnits: [unit.id],

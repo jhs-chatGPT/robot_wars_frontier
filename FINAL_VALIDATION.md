@@ -1,31 +1,32 @@
-# React v0.9.8 validation
+# React v0.9.9 validation
 
-## UI changes
-- Menu/content surfaces are unified to opaque dark-blue panels while button backgrounds are intentionally unchanged.
-- Surface overrides are page-scoped with `.legacy-shell[data-page="..."]` selectors to prevent cross-screen CSS leakage.
-- The sortie operator dialogue remains transparent by explicit earlier design choice.
-- Pilot management keeps `Pilot List | Pilot Information | Training`, with training unified into one screen instead of tabs.
-- Pilot training layout now uses 7 compact parameter rows, 4 terrain cells, and 4 special-skill cards per page.
+## v0.9.9 UI changes
+- Reworked the shared TOP HUD and left navigation into the new ROBOT WARS FRONTIER metallic/cyan command UI.
+- Rebuilt Home as a command dashboard: commander profile, main unit, next operation, quick shortcuts, news, event, and daily mission panels.
+- Rebuilt Pilot Management around the same visual system.
+- Removed the `지휘` pilot stat from the TypeScript stat model, pilot templates, enemy stat generation, and hit calculation.
+- Legacy saves that still contain `command` are normalized to the six-stat structure when loaded.
+- Pilot stats are now `격투 / 사격 / 반응 / 조종 / 방어 / 기량`.
+- Renamed the training concept to `특수능력` and replaced the inline skill grid with a dedicated acquisition/upgrade modal.
+- The special-ability modal shows availability, current Lv, next Lv/MAX, description, type/category, and PP cost.
+- Levelled abilities such as 뉴타입, 강화인간, 저력, 인파이트, 건파이트, 원호공격, 원호방어 now read their stored Lv in battle calculations.
 
 ## CSS isolation checks
-- CSS opening/closing braces: balanced.
-- New v0.9.8 menu selectors: all page-scoped; unscoped page selectors: 0.
-- Generic global `.panel`, `.screen-scroll`, `.sortie-stage`, and generic `div` rules were not modified by v0.9.8.
-- Buttons were excluded from the new opacity overrides.
+- New v0.9.9 visual rules are grouped under `.rwf-*` classes.
+- The new HUD uses `.rwf-shell`, `.rwf-topbar`, and `.rwf-sidebar`; content styles use `.rwf-home-*` and `.rwf-pilot-*`.
+- No new generic `div`, `.panel`, `.sortie-*`, `.hangar-*`, or other broad page selector was introduced by the v0.9.9 block.
+- CSS opening/closing braces: balanced (1160 / 1160).
+- CSS `/assets` references checked: 3 references, 0 missing files.
 
-## Syntax checks
-- `src/pages/PilotPage.tsx`: TypeScript/JSX transpile diagnostics 0 errors.
-- `src/components/layout/GameLayout.tsx`: TypeScript/JSX transpile diagnostics 0 errors.
+## TypeScript checks
+- All 31 `.ts/.tsx` source files parsed with TypeScript `transpileModule`: 0 syntax errors.
+- Whole `src` semantic check was run with temporary React/Zustand type shims because `node_modules` is unavailable in this runtime: 0 project-code type errors.
+- Temporary validation shims were removed after the check.
+
+## Data compatibility
+- Pilot templates contain no `command` stat field.
+- `normalizePilot()` strips legacy `command` from old saves and rebuilds the current six-stat shape.
+- Existing special ability strings such as `뉴타입 Lv1`, `저력 Lv3`, and plain one-level abilities remain compatible.
 
 ## Environment limitation
-Full `tsc -b` cannot resolve React/Zustand/Vite modules because `node_modules` is not installed in this runtime. The resulting full-project diagnostics are dependency-resolution errors; the modified TSX files were separately parsed/transpiled with the globally available TypeScript compiler.
-
-
-## CSS refactor (v0.9.8)
-- Repeated selector contexts: **54 → 11**.
-- Extra repeated rule occurrences: **63 → 12**.
-- v0.9.3~v0.9.5 sortie patch history consolidated into one final 20/50/30 rule set.
-- Removed CSS for obsolete pilot training tabs / former stat-card layout that no longer exists in JSX.
-- Remaining duplicate selectors are intentional theme/override layers (`.panel`, `.legacy-panel`, topbar/sidebar, pilot page overrides).
-- CSS parser errors: **0**.
-- Sortie final-style equivalence checked at **1920 / 1280 / 1100 / 980 / 760px**: **0 mismatches** for core sortie selectors.
+A real Vite production build cannot be run in this runtime because project `node_modules` are not installed and external package installation is unavailable. Source-level syntax, semantic typing, CSS integrity, and asset-reference validation passed as described above.

@@ -43,8 +43,18 @@ const uid = (prefix: string) => `${prefix}-${Date.now().toString(36)}-${Math.ran
 
 
 function normalizePilot(pilot: PlayerPilot): PlayerPilot {
+  const legacyStats = pilot.stats as PlayerPilot['stats'] & { command?: number };
+  const stats = {
+    melee: legacyStats.melee ?? 150,
+    ranged: legacyStats.ranged ?? 150,
+    reaction: legacyStats.reaction ?? 150,
+    control: legacyStats.control ?? 150,
+    defense: legacyStats.defense ?? 150,
+    skill: legacyStats.skill ?? 150,
+  };
   return {
     ...pilot,
+    stats,
     kills: pilot.kills ?? 0,
     pvpWins: pilot.pvpWins ?? 0,
     pvpLosses: pilot.pvpLosses ?? 0,
@@ -165,6 +175,7 @@ interface GameState {
   trainStat: (key: keyof PlayerPilot['stats']) => boolean;
   trainTerrain: (key: TerrainKey) => boolean;
   buyPilotSpecial: (name: string, cost: number) => boolean;
+  trainPilotSpecial: (name: string, cost: number, maxLevel: number) => boolean;
   recruitPilot: (templateId: string) => { ok: boolean; message: string };
   setActivePilot: (templateId: string) => boolean;
   boardUnit: (unitId: string) => void;
@@ -363,6 +374,30 @@ export const useGameStore = create<GameState>()(
         const pilot = get().pilot;
         if (!pilot || pilot.pp < cost || pilot.special.includes(name)) return false;
         const next = { ...pilot, pp: pilot.pp - cost, special: [...pilot.special, name] };
+        if (name === 'SP 업') {
+          next.maxSp += 10;
+          next.sp = Math.min(next.maxSp, next.sp + 10);
+        }
+        set({ pilot: next });
+        return true;
+      },
+      trainPilotSpecial: (name, cost, maxLevel) => {
+        const pilot = get().pilot;
+        if (!pilot || pilot.pp < cost) return false;
+        const prefix = `${name} Lv`;
+        const index = pilot.special.findIndex((item) => item === name || item.startsWith(prefix));
+        let currentLevel = 0;
+        if (index >= 0) {
+          const current = pilot.special[index];
+          currentLevel = current === name ? 1 : Number(current.slice(prefix.length)) || 1;
+        }
+        if (currentLevel >= maxLevel) return false;
+        const nextLevel = currentLevel + 1;
+        const nextLabel = maxLevel > 1 ? `${name} Lv${nextLevel}` : name;
+        const special = [...pilot.special];
+        if (index >= 0) special[index] = nextLabel;
+        else special.push(nextLabel);
+        const next = { ...pilot, pp: pilot.pp - cost, special };
         if (name === 'SP 업') {
           next.maxSp += 10;
           next.sp = Math.min(next.maxSp, next.sp + 10);

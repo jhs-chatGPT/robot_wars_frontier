@@ -24,8 +24,7 @@ export const pilotTemplates: PilotTemplate[] = [
       "reaction": 175,
       "control": 185,
       "defense": 150,
-      "skill": 170,
-      "command": 190
+      "skill": 170
     },
     "terrain": {
       "air": "A",
@@ -64,8 +63,7 @@ export const pilotTemplates: PilotTemplate[] = [
       "reaction": 165,
       "control": 160,
       "defense": 190,
-      "skill": 170,
-      "command": 190
+      "skill": 170
     },
     "terrain": {
       "air": "B",
@@ -104,8 +102,7 @@ export const pilotTemplates: PilotTemplate[] = [
       "reaction": 180,
       "control": 185,
       "defense": 135,
-      "skill": 200,
-      "command": 175
+      "skill": 200
     },
     "terrain": {
       "air": "A",
@@ -144,8 +141,7 @@ export const pilotTemplates: PilotTemplate[] = [
       "reaction": 165,
       "control": 160,
       "defense": 185,
-      "skill": 165,
-      "command": 195
+      "skill": 165
     },
     "terrain": {
       "air": "B",
@@ -184,8 +180,7 @@ export const pilotTemplates: PilotTemplate[] = [
       "reaction": 190,
       "control": 200,
       "defense": 130,
-      "skill": 190,
-      "command": 185
+      "skill": 190
     },
     "terrain": {
       "air": "A",
@@ -224,8 +219,7 @@ export const pilotTemplates: PilotTemplate[] = [
       "reaction": 170,
       "control": 185,
       "defense": 150,
-      "skill": 175,
-      "command": 200
+      "skill": 175
     },
     "terrain": {
       "air": "A",
@@ -264,8 +258,7 @@ export const pilotTemplates: PilotTemplate[] = [
       "reaction": 200,
       "control": 200,
       "defense": 120,
-      "skill": 190,
-      "command": 185
+      "skill": 190
     },
     "terrain": {
       "air": "S",
@@ -304,8 +297,7 @@ export const pilotTemplates: PilotTemplate[] = [
       "reaction": 180,
       "control": 185,
       "defense": 165,
-      "skill": 190,
-      "command": 160
+      "skill": 190
     },
     "terrain": {
       "air": "A",
@@ -344,8 +336,7 @@ export const pilotTemplates: PilotTemplate[] = [
       "reaction": 175,
       "control": 165,
       "defense": 200,
-      "skill": 150,
-      "command": 180
+      "skill": 150
     },
     "terrain": {
       "air": "B",
@@ -384,8 +375,7 @@ export const pilotTemplates: PilotTemplate[] = [
       "reaction": 180,
       "control": 195,
       "defense": 140,
-      "skill": 185,
-      "command": 185
+      "skill": 185
     },
     "terrain": {
       "air": "A",

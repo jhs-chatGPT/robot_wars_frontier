@@ -2,21 +2,21 @@ import type { ReactNode } from 'react';
 import { useGameStore } from '../../store/gameStore';
 import type { PageId } from '../../types/game';
 
-const nav: Array<[PageId, string, string]> = [
-  ['home','홈','HOME'],
-  ['scenario','작전 출격','MISSION'],
-  ['hangar','기체 개발','DEVELOP'],
-  ['unitlist','기체 목록','UNIT LIST'],
-  ['parts','강화파츠','PARTS'],
-  ['pilot','파일럿 관리','PILOT'],
-  ['recruit','파일럿 영입','RECRUIT'],
-  ['shop','상점','SHOP'],
-  ['encyclopedia','도감','ENCYCLOPEDIA'],
-  ['pvp','PvP','ARENA'],
-  ['tourney','대회','TOURNAMENT'],
-  ['admin','관리자','ADMIN'],
-  ['option','설정','OPTION'],
-  ['titlepage','타이틀로','TITLE'],
+const nav: Array<[PageId, string, string, string]> = [
+  ['home','홈','BASE','⌂'],
+  ['pilot','파일럿 관리','PILOT','◉'],
+  ['recruit','파일럿 영입','RECRUIT','＋'],
+  ['unitlist','기체 목록','UNIT','◇'],
+  ['hangar','기체 개발','DEVELOP','⌁'],
+  ['parts','강화파츠','CUSTOMIZE','⛭'],
+  ['scenario','작전 출격','SORTIE','⚔'],
+  ['pvp','PvP','ARENA','⌖'],
+  ['tourney','대회','TOURNAMENT','♜'],
+  ['shop','상점','SHOP','▰'],
+  ['encyclopedia','도감','ARCHIVE','▤'],
+  ['admin','관리자','ADMIN','▦'],
+  ['option','설정','SETTING','⚙'],
+  ['titlepage','타이틀로','TITLE','↩'],
 ];
 
 export function GameLayout({ children }: { children: ReactNode }) {
@@ -27,32 +27,49 @@ export function GameLayout({ children }: { children: ReactNode }) {
   const compactMode = useGameStore((s) => s.settings.compactMode);
 
   return (
-    <div className={`game-shell legacy-shell ${compactMode ? 'compact-ui' : ''}`} data-page={page}>
-      <header className="topbar legacy-topbar">
-        <div className="legacy-logo"><span>ROBOT WARS</span><small>FRONTIER</small></div>
-        <div className="legacy-resources">
-          <div className="legacy-resource credit"><span className="legacy-resource-icon gold">C</span><div><small>CREDIT</small><strong>{(pilot?.credit ?? 0).toLocaleString()}</strong></div></div>
-          <div className="legacy-resource pp"><span className="legacy-resource-icon crystal">PP</span><div><small>PP</small><strong>{(pilot?.pp ?? 0).toLocaleString()}</strong></div></div>
-          <div className="legacy-resource kills"><span className="legacy-resource-icon green">K</span><div><small>KILLS</small><strong>{(pilot?.kills ?? 0).toLocaleString()}</strong></div></div>
+    <div className={`game-shell legacy-shell rwf-shell ${compactMode ? 'compact-ui' : ''}`} data-page={page}>
+      <header className="topbar rwf-topbar">
+        <div className="rwf-brand">
+          <div className="rwf-brand-title"><span>ROBOT WARS</span><small>FRONTIER</small></div>
+          <div className="rwf-brand-motto"><b>인류의 의지로, 기체에.</b><small>BEYOND THE BATTLEFIELD.</small></div>
         </div>
-        <div className="legacy-system">
-          {battle && <button className="legacy-battle-chip" onClick={() => setPage('battle')}>전투 W{battle.activeWave}</button>}
-          <button className="legacy-gear" aria-label="설정" onClick={() => setPage('option')}>⚙</button>
-          <span>Ver React v0.9.8</span><span>UC.0087&nbsp;&nbsp;04/12&nbsp;&nbsp;14:25</span>
+
+        <div className="rwf-resource-strip">
+          <div className="rwf-resource credit"><span className="rwf-resource-icon">◎</span><div><small>CREDIT</small><strong>{(pilot?.credit ?? 0).toLocaleString()}</strong></div></div>
+          <div className="rwf-resource pp"><span className="rwf-resource-icon">P</span><div><small>PP</small><strong>{(pilot?.pp ?? 0).toLocaleString()}</strong></div></div>
+          <div className="rwf-resource kills"><span className="rwf-resource-icon">✦</span><div><small>KILLS</small><strong>{(pilot?.kills ?? 0).toLocaleString()}</strong></div></div>
+        </div>
+
+        <div className="rwf-faction">
+          <span className="rwf-faction-mark">▽</span>
+          <div><b>SRW</b><small>EARTH FEDERATION</small></div>
+        </div>
+
+        <div className="rwf-system-actions">
+          {battle && <button className="rwf-battle-chip" onClick={() => setPage('battle')}>BATTLE W{battle.activeWave}</button>}
+          <button aria-label="홈" onClick={() => setPage('home')}>⌂</button>
+          <button aria-label="설정" onClick={() => setPage('option')}>⚙</button>
+          <small>v0.9.9</small>
         </div>
       </header>
-      <aside className="sidebar legacy-sidebar">
-        <div className="legacy-nav-head"><small>TACTICAL COMMAND</small><b>OPERATION MENU</b></div>
+
+      <aside className="sidebar rwf-sidebar">
         <nav>
-          {nav.map(([id, label, sub]) => (
+          {nav.map(([id, label, sub, icon]) => (
             <button key={id} className={page === id ? 'active' : ''} onClick={() => setPage(id)}>
-              <span className="legacy-nav-icon" aria-hidden="true">◇</span>
-              <span><b>{label}</b><small>{sub}</small></span>
+              <span className="rwf-nav-icon" aria-hidden="true">{icon}</span>
+              <span className="rwf-nav-copy"><b>{label}</b><small>{sub}</small></span>
             </button>
           ))}
         </nav>
-        <div className="sidebar-foot">ROBOT WARS : FRONTIER<br/><span>TACTICAL SYSTEM UI</span><br/><b>React v0.9.8</b></div>
+        <div className="rwf-sidebar-foot">
+          <span className="rwf-sidebar-emblem">▽</span>
+          <b>E.F. FORCE</b>
+          <small>A SAFE TOMORROW<br/>FOR ALL HUMANITY.</small>
+          <em>React v0.9.9</em>
+        </div>
       </aside>
+
       <main className="main-stage legacy-main-stage">{children}</main>
     </div>
   );
