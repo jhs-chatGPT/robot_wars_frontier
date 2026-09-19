@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 72" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0a2b47"/><stop offset=".45" stop-color="#071b2e"/><stop offset="1" stop-color="#030d18"/></linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#32c8ff"/><stop offset=".55" stop-color="#1e6f9c"/><stop offset="1" stop-color="#6ee8ff"/></linearGradient>
+    <pattern id="p" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="skewX(-20)"><path d="M0 0v12" stroke="#2f80a7" stroke-opacity=".13"/></pattern>
+    <filter id="g"><feGaussianBlur stdDeviation="1.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <path d="M12 1h246l20 16v39l-15 15H2V14z" fill="url(#bg)" stroke="#2c78a3" stroke-width="2"/>
+  <path d="M12 1h112" stroke="#69eaff" stroke-width="2.4" filter="url(#g)"/>
+  <path d="M2 16v40l14 14M260 2l18 15v39l-15 15" fill="none" stroke="#53d8ff" stroke-opacity=".7"/>
+  <path d="M17 8h228l15 12v29l-11 12H12V19z" fill="url(#p)" stroke="#113f5d" stroke-width="1"/>
+  <path d="M235 70l43-34M248 70l30-24" stroke="#154a6c" stroke-width="3" opacity=".7"/>
+</svg>

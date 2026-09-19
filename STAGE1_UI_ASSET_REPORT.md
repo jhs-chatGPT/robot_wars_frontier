@@ -1,36 +1,26 @@
-# v0.9.11 Stage 1 UI Asset Report
+# v0.9.12 Stage 1 Shell Rebuild Report
 
 ## Scope
-Stage 1 intentionally changes only the common game shell:
-- TOP HUD
-- resource HUD frames
-- Earth Federation/SRW faction plate
-- left navigation
-- left navigation active/idle state
-- sidebar footer/emblem
+This stage intentionally changes only the shared game shell: TOP HUD and left command rail. Content pages are not redesigned in this package.
 
-Content pages (Home, Sortie, Pilot, Hangar, Parts, etc.) are not redesigned in this stage.
+## Visual rebuild
+- Replaced the v0.9.11 thin shell with a heavier mechanical HUD composition.
+- Enlarged the ROBOT WARS FRONTIER logo and resource HUD blocks.
+- Added independent mechanical SVG frames for CREDIT / PP / KILLS and faction identity.
+- Rebuilt the left navigation around 68px-source mechanical frames with a separate active-state glow frame.
+- Replaced the menu glyph set with 14 larger high-contrast SVG icons.
+- Rebuilt the E.F. FORCE footer plate and emblem.
+- Kept all shell CSS isolated in `src/frontier-shell.css`.
 
-## New UI assets
-`public/assets/ui/`
-- 14 menu icon SVGs
-- `emblem_ef.svg`
-- `brand_mark.svg`
-- `frame_resource.svg`
-- `frame_nav_idle.svg`
-- `frame_nav_active.svg`
-- `frame_sidebar_footer.svg`
-- `frame_topbar.svg`
+## New v2 frame assets
+- `frame_topbar_v2.svg`
+- `frame_resource_v2.svg`
+- `frame_faction_v2.svg`
+- `frame_nav_idle_v2.svg`
+- `frame_nav_active_v2.svg`
+- `frame_sidebar_footer_v2.svg`
+- `emblem_ef_v2.svg`
+- `rwf_logo.png`
 
-Total: 21 SVG assets.
-
-## Isolation
-Stage-specific CSS is isolated in `src/frontier-shell.css` and imported after `styles.css`.
-All Stage 1 selectors are scoped under `.rwf-shell` / `.rwf-*` and do not target content-page generic selectors such as `.panel`, `.sortie-*`, `.hangar-*`, or plain `div`.
-
-## Validation
-- `frontier-shell.css` braces: 76 / 76
-- referenced shell assets missing: 0
-- menu icon files: 14 / 14
-- `GameLayout.tsx` TypeScript/JSX syntax errors: 0
-- `main.tsx` TypeScript/JSX syntax errors: 0
+## Isolation rule
+No Home/Sortie/Pilot/Hangar/Parts page JSX or page-specific CSS is changed in this stage. The next stage should begin only after the shared shell direction is accepted.

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 68" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#0fb3ff"/><stop offset=".32" stop-color="#087fc8"/><stop offset=".72" stop-color="#07518b"/><stop offset="1" stop-color="#062b4c"/></linearGradient>
+    <radialGradient id="flare" cx=".16" cy=".5" r=".55"><stop stop-color="#b5f7ff" stop-opacity=".7"/><stop offset=".45" stop-color="#37cfff" stop-opacity=".22"/><stop offset="1" stop-color="#0c4c7c" stop-opacity="0"/></radialGradient>
+    <pattern id="scan" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="skewX(-20)"><path d="M0 0v9" stroke="#d5faff" stroke-opacity=".10"/></pattern>
+    <filter id="glow" x="-20%" y="-80%" width="140%" height="260%"><feGaussianBlur stdDeviation="2.3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <path d="M1 1h243l15 13v40l-13 13H1z" fill="url(#bg)" stroke="#8df2ff" stroke-width="1.8"/>
+  <path d="M1 1h70v66H1z" fill="url(#flare)"/>
+  <rect x="1" y="1" width="258" height="66" fill="url(#scan)"/>
+  <path d="M3 7v54" stroke="#d1fbff" stroke-width="4" filter="url(#glow)"/>
+  <path d="M11 3h115" stroke="#d6fbff" stroke-width="2" filter="url(#glow)"/>
+  <path d="M68 7v54" stroke="#a5eeff" stroke-opacity=".78"/>
+  <path d="M230 66h16l13-13" fill="none" stroke="#b8f5ff" stroke-width="2"/>
+</svg>
