@@ -30,3 +30,13 @@ v0.9.9에서 신규 HUD를 실제 화면에 적용한 뒤 확인된 축소감, �
 
 ## 환경 제한
 현재 런타임에는 프로젝트 `node_modules`가 없어 실제 Vite production build를 수행하지 못했습니다. TypeScript 구문, CSS 구조, 에셋 참조를 검증했습니다.
+
+## v0.9.11 Stage 1 common UI asset shell
+- TOP HUD and left navigation replaced with reusable SVG asset system.
+- 21 new SVG UI assets added under `public/assets/ui/`.
+- Stage CSS isolated in `src/frontier-shell.css`.
+- CSS braces: 76/76.
+- Missing Stage 1 asset refs: 0.
+- Menu icons: 14/14.
+- Changed TSX syntax errors: 0.
+- No content-page generic selector was added in the Stage 1 CSS file.

@@ -165,3 +165,6 @@ React에서 명시적으로 새 게임을 초기화한 저장이 있으면 레�
 - 홈/파일럿 관리의 폰트·패널 밀도 확대.
 - 영입/기체목록/기체개발/강화파츠/상점/도감/PvP/대회/관리자/설정/전투/작전출격을 페이지별 범위 CSS로 시각 통일.
 - 특수능력 습득/강화 모달과 6능력 구조는 v0.9.9 기능을 그대로 유지.
+
+## v0.9.11 Stage 1
+Common shell asset pass completed: TOP HUD + left menu only. Content screen redesign deliberately deferred until shell visual approval.
