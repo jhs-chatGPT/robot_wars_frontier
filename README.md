@@ -1,3 +1,7 @@
+# v0.9.15 — HOME 목표 시안 교정
+
+UI 소스 수정본입니다. 실제 브라우저 검증과 빌드는 아직 완료되지 않았습니다. 설계/변경사항은 docs/HOME-v0.9.15-spec.md, 검증 상태는 design-qa.md를 확인하세요.
+
 # ROBOT WARS FRONTIER — React v0.9.14
 
 ## 9271 확정안 반영

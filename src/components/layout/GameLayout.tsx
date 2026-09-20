@@ -1,3 +1,4 @@
+import { MenuButton } from '../console/Console';
 import type { ReactNode } from 'react';
 import { useGameStore } from '../../store/gameStore';
 import type { PageId } from '../../types/game';
@@ -37,9 +38,9 @@ export function GameLayout({ children }: { children: ReactNode }) {
         </div>
 
         <div className="rwf-resource-strip" aria-label="보유 자원">
-          <div className="rwf-resource credit"><span className="rwf-resource-icon">C</span><div><small>CREDIT</small><strong>{(pilot?.credit ?? 0).toLocaleString()}</strong></div></div>
-          <div className="rwf-resource pp"><span className="rwf-resource-icon">P</span><div><small>PP</small><strong>{(pilot?.pp ?? 0).toLocaleString()}</strong></div></div>
-          <div className="rwf-resource kills"><span className="rwf-resource-icon">K</span><div><small>KILLS</small><strong>{(pilot?.kills ?? 0).toLocaleString()}</strong></div></div>
+          <div className="rwf-resource credit"><span className="rwf-resource-icon"><img src="/ui/icon_credit.svg" alt=""/></span><div><small>CREDIT</small><strong>{(pilot?.credit ?? 0).toLocaleString()}</strong></div></div>
+          <div className="rwf-resource pp"><span className="rwf-resource-icon"><img src="/ui/icon_pp.svg" alt=""/></span><div><small>PP</small><strong>{(pilot?.pp ?? 0).toLocaleString()}</strong></div></div>
+          <div className="rwf-resource kills"><span className="rwf-resource-icon"><img src="/ui/icon_kills.svg" alt=""/></span><div><small>KILLS</small><strong>{(pilot?.kills ?? 0).toLocaleString()}</strong></div></div>
         </div>
 
         <div className="rwf-faction">
@@ -53,24 +54,21 @@ export function GameLayout({ children }: { children: ReactNode }) {
           <button aria-label="작전 출격" title="작전 출격" onClick={() => setPage('scenario')}><img src="/assets/ui/icon_sortie.svg" alt="" /></button>
           <button aria-label="파일럿 관리" title="파일럿 관리" onClick={() => setPage('pilot')}><img src="/assets/ui/icon_pilot.svg" alt="" /></button>
           <button aria-label="설정" title="설정" onClick={() => setPage('option')}><img src="/assets/ui/icon_setting.svg" alt="" /></button>
-          <small>v0.9.14</small>
+          <small>v0.9.15</small>
         </div>
       </header>
 
       <aside className="sidebar rwf-sidebar">
         <nav>
           {nav.map(([id, label, sub, icon]) => (
-            <button key={id} className={page === id ? 'active' : ''} aria-current={page === id ? 'page' : undefined} aria-label={label} title={label} onClick={() => setPage(id)}>
-              <span className="rwf-nav-icon" aria-hidden="true"><img src={`/assets/ui/icon_${icon}.svg`} alt="" /></span>
-              <span className="rwf-nav-copy"><b>{label}</b><small>{sub}</small></span>
-            </button>
+            <MenuButton key={id} label={label} sublabel={sub} icon={icon} active={page === id} onClick={() => setPage(id)}/>
           ))}
         </nav>
         <div className="rwf-sidebar-foot">
           <img className="rwf-sidebar-emblem" src="/assets/ui/emblem_ef_v2.svg" alt="" aria-hidden="true" />
           <b>E.F. FORCE</b>
           <small>A SAFE TOMORROW<br/>FOR ALL HUMANITY.</small>
-          <em>React v0.9.14</em>
+          <em>React v0.9.15</em>
         </div>
       </aside>
 

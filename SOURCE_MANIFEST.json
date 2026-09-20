@@ -1,8 +1,6 @@
 {
-  "version": "0.9.14",
-  "base_version": "0.9.12",
-  "reference": "docs/reference-9271.jpg",
-  "validation": "build and visual QA blocked",
+  "version": "0.9.15",
+  "build": "blocked: tsc unavailable",
   "files": [
     {
       "path": ".gitignore",
@@ -26,8 +24,8 @@
     },
     {
       "path": "README.md",
-      "size": 9267,
-      "sha256": "0b12c58f8f5aff9710c9dd33f5a36fb96722bf9740e1fdf5ebe3f8c4a79ed910"
+      "size": 9516,
+      "sha256": "2954adef572728bed5149dd2c7af9a4ee5be3c8adb548952a866a20989b27ffe"
     },
     {
       "path": "SHELL_VALIDATION.md",
@@ -46,8 +44,13 @@
     },
     {
       "path": "design-qa.md",
-      "size": 1498,
-      "sha256": "51701ba568a492a10998ca6c12cd88b8f04fc54d0346785bb11a1383efff5dd7"
+      "size": 1064,
+      "sha256": "0472ea83cbc6644cec73826d142392d252115217e55aa06048751df00735684e"
+    },
+    {
+      "path": "docs/HOME-v0.9.15-spec.md",
+      "size": 4932,
+      "sha256": "59ce8b55dfd6a1c56cc3a9dfa9ad6ffd70261ba6ed5c5b80dbf84018ad991fe7"
     },
     {
       "path": "docs/reference-9271.jpg",
@@ -67,7 +70,7 @@
     {
       "path": "package.json",
       "size": 583,
-      "sha256": "c472a0f02c7ee650f6c4dd5c3e17b8a1b416a6d51d84c6722a33939770581dd1"
+      "sha256": "15a7dd285de615c991c07f05d809ef57cebacf649d2675536f7b887d3d892867"
     },
     {
       "path": "public/assets/backgrounds/bg-hangar.webp",
@@ -595,14 +598,64 @@
       "sha256": "ac8abf33f3ed06d91e9a99c894c3c0cbf97e8b890253ee4339c41b6d0075c0c4"
     },
     {
+      "path": "public/ui/LUCIDE-LICENSE",
+      "size": 3208,
+      "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57"
+    },
+    {
       "path": "public/ui/console-panel.png",
       "size": 565650,
       "sha256": "c7b21c30c687b5b2bf10fb5dc89c36d34eae6e7c08abd0c65425a2a546aec26a"
     },
     {
+      "path": "public/ui/icon_armor.svg",
+      "size": 335,
+      "sha256": "d0a2d45eb8d97768ecf34fd66641556b3f96ba75ce7c7bbf92d518a786d35488"
+    },
+    {
+      "path": "public/ui/icon_credit.svg",
+      "size": 265,
+      "sha256": "b5e813a62a48e58d205caca69f482a5bc0ef0eb59691135c39161b37bdeb5873"
+    },
+    {
+      "path": "public/ui/icon_en.svg",
+      "size": 328,
+      "sha256": "bea39abe45369ab801e897b12ca53e130c6d926247d452151093e678ab5d6564"
+    },
+    {
+      "path": "public/ui/icon_hp.svg",
+      "size": 322,
+      "sha256": "84a1de600457208fbb6d46ac53b0bb43c0c022593b27245d57760226181a274f"
+    },
+    {
+      "path": "public/ui/icon_kills.svg",
+      "size": 494,
+      "sha256": "5e430d4e77a69707fc4f51f49d18fe266a684425403dc024f98b03816cac5b37"
+    },
+    {
+      "path": "public/ui/icon_mobility.svg",
+      "size": 277,
+      "sha256": "10096fa39fb4d5df670558cba796ae496a7f2c3b317ec174a7fd24e84d07c9d4"
+    },
+    {
+      "path": "public/ui/icon_move.svg",
+      "size": 457,
+      "sha256": "1361e0bd9437038f511316eaeca969f2d7fd43fd536b0d73cb978940e99a909f"
+    },
+    {
+      "path": "public/ui/icon_pp.svg",
+      "size": 328,
+      "sha256": "bea39abe45369ab801e897b12ca53e130c6d926247d452151093e678ab5d6564"
+    },
+    {
       "path": "public/ui/orbital-dock.png",
       "size": 2838734,
       "sha256": "f144421e5427963626737a8fb60efcb415c051b1e587022a18e0ebb84cf7e06d"
+    },
+    {
+      "path": "public/ui/panel_frame.png",
+      "size": 927129,
+      "sha256": "a89ba56bae612cbf9b6f15026a8ee835ad5a7983680fb3ad779ff34a6946a641"
     },
     {
       "path": "public/ui/shortcut-blue.png",
@@ -625,9 +678,19 @@
       "sha256": "df30993d326600a4d8632d6dfeff5bab5e7cf641a3694f3e1ff991c3a4f432f3"
     },
     {
+      "path": "src/components/console/Console.tsx",
+      "size": 1674,
+      "sha256": "e6bb9b32fcfa28cfbad25a929d89f0156780b31b5f12ca1231036d5d62b24cb6"
+    },
+    {
       "path": "src/components/layout/GameLayout.tsx",
-      "size": 4286,
-      "sha256": "35761cb039e8d07dbe0438d4e45548dfe0fa5cdb42640ddf73dfd48ef9d46996"
+      "size": 4159,
+      "sha256": "6bc46b55f74dc90f7cfe7bdf1c13db7fdf57d86eaff3f7cdfc859414a93f883a"
+    },
+    {
+      "path": "src/console-refinement.css",
+      "size": 10510,
+      "sha256": "abfb99121f95bc4e3f03542b47da49d2fc0eba40be97277a8d2fee9aeb5b374f"
     },
     {
       "path": "src/data/battleEngine.ts",
@@ -691,8 +754,8 @@
     },
     {
       "path": "src/main.tsx",
-      "size": 292,
-      "sha256": "15caa569d99580a6330814e3b816b5825a5509f80462b6080faf2f4d9760d33d"
+      "size": 328,
+      "sha256": "6518623efac5f5a64f0d41acff0e1c136fbc777f3a64a81ec16c0f84e8ff7904"
     },
     {
       "path": "src/pages/AdminPage.tsx",
@@ -716,8 +779,8 @@
     },
     {
       "path": "src/pages/HomePage.tsx",
-      "size": 8627,
-      "sha256": "10afcb1623d66c990a4365f286fdf38d31ce1dd17bfd86afadedcfe2b8bc0b1f"
+      "size": 9495,
+      "sha256": "4bf50bee03d3597da2e93a1e7dea6ca68d264e0c298bd8afd5039c2f9f7fe159"
     },
     {
       "path": "src/pages/OptionPage.tsx",
