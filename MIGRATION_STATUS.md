@@ -168,3 +168,8 @@ React에서 명시적으로 새 게임을 초기화한 저장이 있으면 레�
 
 ## v0.9.11 Stage 1
 Common shell asset pass completed: TOP HUD + left menu only. Content screen redesign deliberately deferred until shell visual approval.
+
+## v0.9.12 Stage 1 shell rebuild
+- Rebuilt the common TOP HUD and left command rail against the approved visual target.
+- Uses heavier mechanical SVG frames, larger iconography, active-state glow, and an enlarged brand/resource/faction hierarchy.
+- Content-page redesign remains intentionally deferred until this shared shell is accepted.

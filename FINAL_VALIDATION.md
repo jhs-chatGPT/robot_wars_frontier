@@ -40,3 +40,9 @@ v0.9.9에서 신규 HUD를 실제 화면에 적용한 뒤 확인된 축소감, �
 - Menu icons: 14/14.
 - Changed TSX syntax errors: 0.
 - No content-page generic selector was added in the Stage 1 CSS file.
+
+## v0.9.12 Stage 1 shell rebuild
+- Scope limited to TOP HUD + left command rail.
+- v2 mechanical shell frames added and referenced by `frontier-shell.css`.
+- Menu icon set upgraded while preserving the existing navigation ids/actions.
+- No content-page JSX was modified for this stage.

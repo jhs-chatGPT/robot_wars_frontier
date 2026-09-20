@@ -1,5 +1,7 @@
 {
-  "version": "0.9.9",
+  "version": "0.9.13",
+  "base_version": "0.9.12",
+  "validation": "build and visual QA blocked; daily logic tests passed",
   "files": [
     {
       "path": ".gitignore",
@@ -13,23 +15,43 @@
     },
     {
       "path": "FINAL_VALIDATION.md",
-      "size": 2447,
-      "sha256": "b805a038271699a56e819860a0f45743b130060f0681a425e340112bd33e6d25"
+      "size": 2917,
+      "sha256": "822ea080e4d014d791c30e37b4df35cf55082e5ada88825b4cea0a59ae139a67"
     },
     {
       "path": "MIGRATION_STATUS.md",
-      "size": 5638,
-      "sha256": "beedbbe3538849b069af2f985a1e7748e0232e099fa1385beaac118657eabaed"
+      "size": 6800,
+      "sha256": "8efba7550525057df35a71297a1d215f6b67f6cbf367d4d0eecd0ffc79bbab1d"
     },
     {
       "path": "README.md",
-      "size": 3070,
-      "sha256": "18aafd17c6b290412fd0c420f2bf4c9a9d0d0c3f90916ec542d3e000ccc5cc6c"
+      "size": 6572,
+      "sha256": "d3b8cbc456552fac5d543e50ecf55c650c23bf5c7693ba965abc073f20fb55fc"
+    },
+    {
+      "path": "SHELL_VALIDATION.md",
+      "size": 348,
+      "sha256": "0e8d14d965e4de4d6220c79a9b14c65aa1a02ee8e7eb3586ebee2c670aedb3a3"
+    },
+    {
+      "path": "STAGE1_UI_ASSET_REPORT.md",
+      "size": 1138,
+      "sha256": "a2e12a521edcd22996d91b5b926ee10fef0072f473dfbcfa3d997cd8f1887746"
+    },
+    {
+      "path": "UI_HOTFIX_REPORT.md",
+      "size": 1051,
+      "sha256": "e0ca9def857751f7b5d7b1427507cffaf5ecd4f75bb4d496d206425138fb5b3f"
+    },
+    {
+      "path": "design-qa.md",
+      "size": 1557,
+      "sha256": "593aa9f0e5f73c52545dc8367035f4eb4ee0b5ec653454eab18f360d146f5eb5"
     },
     {
       "path": "index.html",
-      "size": 367,
-      "sha256": "a6638fac278b17f109ed88a58d1d2a342d6029ed2c3b57dcdf66e4c79b7093fb"
+      "size": 370,
+      "sha256": "3bc974977c33385353c1326e68c9005777ff3306c2f2913550d4263f6903e814"
     },
     {
       "path": "netlify.toml",
@@ -38,8 +60,8 @@
     },
     {
       "path": "package.json",
-      "size": 492,
-      "sha256": "a098835a50e2cadc6c0425f7a6f262b4e8a9921e946aef5d2c6a9eec84a93752"
+      "size": 583,
+      "sha256": "b88fa7175ec47a47d7813bb82fd34891c1f5be33e08101cb5599158db8781598"
     },
     {
       "path": "public/assets/backgrounds/bg-hangar.webp",
@@ -342,6 +364,151 @@
       "sha256": "16dc018fb7b46a3a6493817b9387461029bab0b8d962738eba8bd627648125bd"
     },
     {
+      "path": "public/assets/ui/brand_mark.svg",
+      "size": 257,
+      "sha256": "f1678bc1060576096d67da21d27e0214d64efad7100224f478a105052351368f"
+    },
+    {
+      "path": "public/assets/ui/emblem_ef.svg",
+      "size": 358,
+      "sha256": "ea944b6aff15d6dc56f4da001106bbbf1e82e42b057d8064db7cd6eaa264f12f"
+    },
+    {
+      "path": "public/assets/ui/emblem_ef_v2.svg",
+      "size": 730,
+      "sha256": "33c26ea6492cd36e8a37b3ca45ce7cf6276a0c8afe17af4cc6df5bc399171351"
+    },
+    {
+      "path": "public/assets/ui/frame_faction_v2.svg",
+      "size": 462,
+      "sha256": "bb01e8120df362815757a8245199952037516fd77de65bae8f7c2a1e96e75cff"
+    },
+    {
+      "path": "public/assets/ui/frame_nav_active.svg",
+      "size": 687,
+      "sha256": "8257afdbb0bf059d1fea952cf78da0f418ce9b684e54b27c42d15c056767136e"
+    },
+    {
+      "path": "public/assets/ui/frame_nav_active_v2.svg",
+      "size": 1439,
+      "sha256": "46856e4f7a599a969449dd6fa97376ed97a687768024d7239f092d6fcda343cb"
+    },
+    {
+      "path": "public/assets/ui/frame_nav_idle.svg",
+      "size": 392,
+      "sha256": "9a1258d28197b065ed2f997ca8321ec3052a56415dd543de8d9bb171cd81600b"
+    },
+    {
+      "path": "public/assets/ui/frame_nav_idle_v2.svg",
+      "size": 1100,
+      "sha256": "ca67d684ba9d26dc19c8e69c4e5172b787e605a2bbe0f487022868bfdc5c4b02"
+    },
+    {
+      "path": "public/assets/ui/frame_resource.svg",
+      "size": 688,
+      "sha256": "c62c757d3ac696bf6bce9ba6c430217c8c26d8b844ee08a4d7a539eb94631384"
+    },
+    {
+      "path": "public/assets/ui/frame_resource_v2.svg",
+      "size": 1258,
+      "sha256": "44ac8b431d6a9ad4bfcdf1bd8f1e0216ad349d8364ac43bba82fe728f75d3c3a"
+    },
+    {
+      "path": "public/assets/ui/frame_sidebar_footer.svg",
+      "size": 406,
+      "sha256": "75558992d91d46b26ba9d629059b38a6bca15009b9aea3b7f384f09083253d50"
+    },
+    {
+      "path": "public/assets/ui/frame_sidebar_footer_v2.svg",
+      "size": 748,
+      "sha256": "437b277688c19676637d5ebdbb6745761b824bfa7c88a153bfbad272d9c4afd9"
+    },
+    {
+      "path": "public/assets/ui/frame_topbar.svg",
+      "size": 521,
+      "sha256": "b1127b427a6bf81e18c66e4adb3164eab7f6abe369575373091ac81ba9fbed48"
+    },
+    {
+      "path": "public/assets/ui/frame_topbar_v2.svg",
+      "size": 2052,
+      "sha256": "441a27f89fb37af11308873c4fa99017cff39b886af9d5b0d6b2e808ebdb96d1"
+    },
+    {
+      "path": "public/assets/ui/icon_admin.svg",
+      "size": 622,
+      "sha256": "1f1ebd53ad3708eb3688f3450f1d5320c878944fdf573c82ec9326ff8cc4126d"
+    },
+    {
+      "path": "public/assets/ui/icon_archive.svg",
+      "size": 606,
+      "sha256": "53a820e9a5961f72b912e15bfefb573dd8d5d13a08b58bc1d26e78b91d0f038d"
+    },
+    {
+      "path": "public/assets/ui/icon_develop.svg",
+      "size": 622,
+      "sha256": "e8a2483dbfb86f1ffd2a6b6ea3d677a971820265128ecae2caf1f1b81052e76f"
+    },
+    {
+      "path": "public/assets/ui/icon_home.svg",
+      "size": 564,
+      "sha256": "a841d660eb23063f753abbdb063a3071357c2b3397e34892e2d0cc49855af21b"
+    },
+    {
+      "path": "public/assets/ui/icon_parts.svg",
+      "size": 622,
+      "sha256": "d15509be200b236cfab7598ffad175c69b620197dfe46d11a7e17865479ebb92"
+    },
+    {
+      "path": "public/assets/ui/icon_pilot.svg",
+      "size": 573,
+      "sha256": "c6a28a907d8a5fedcb0fa2135255a6b23e95361f4437a29f0f6980b794e2a5df"
+    },
+    {
+      "path": "public/assets/ui/icon_pvp.svg",
+      "size": 588,
+      "sha256": "7c537b144e6c9d74a0f0e8c2dac2eb2f6aaae01979dae4277332b828e7645e2e"
+    },
+    {
+      "path": "public/assets/ui/icon_recruit.svg",
+      "size": 583,
+      "sha256": "1495d604bc24f0643925a5e6d43c502e000a4e5bd4edb6b1899fc9e3a599184a"
+    },
+    {
+      "path": "public/assets/ui/icon_setting.svg",
+      "size": 621,
+      "sha256": "85bd5642455fd3595d06465ea3da37a5737d852d00cd4c273fb9374edb6b0bf2"
+    },
+    {
+      "path": "public/assets/ui/icon_shop.svg",
+      "size": 580,
+      "sha256": "2e6599655d14124e3faebd8d212aca2941e1105162c5554aa8a9945d7394563c"
+    },
+    {
+      "path": "public/assets/ui/icon_sortie.svg",
+      "size": 577,
+      "sha256": "84dfcca984ca36f4b82301bfd5841ffce846a91b9c6db98e0eaeaa843a6d1e86"
+    },
+    {
+      "path": "public/assets/ui/icon_title.svg",
+      "size": 620,
+      "sha256": "e26c042184e829ee9991afb5c4368ea30604ec395916c3eb27d09b5eaa3312c2"
+    },
+    {
+      "path": "public/assets/ui/icon_tourney.svg",
+      "size": 630,
+      "sha256": "7a4c71e519d2d9abbfac886542db34327b53d10fcf8777d55b65081d4ca531c4"
+    },
+    {
+      "path": "public/assets/ui/icon_unit.svg",
+      "size": 592,
+      "sha256": "31cd6daa323428b67a397eba598e55e52ec1eaf846c586a5665941f89344cce9"
+    },
+    {
+      "path": "public/assets/ui/rwf_logo.png",
+      "size": 44549,
+      "sha256": "828cfe1397271830f869ef5a29218f7e0a0e0a0408a85396f04a7b695e14ae35"
+    },
+    {
       "path": "public/assets/units/black_creed.png",
       "size": 1418711,
       "sha256": "16cde1ab50d4f44ce2cac5a9bd3e3f2b993115bf5895e447bcc8379eedfefc18"
@@ -422,14 +589,24 @@
       "sha256": "ac8abf33f3ed06d91e9a99c894c3c0cbf97e8b890253ee4339c41b6d0075c0c4"
     },
     {
+      "path": "public/ui/console-panel.png",
+      "size": 565650,
+      "sha256": "c7b21c30c687b5b2bf10fb5dc89c36d34eae6e7c08abd0c65425a2a546aec26a"
+    },
+    {
       "path": "src/App.tsx",
       "size": 1696,
       "sha256": "92815eb1c1a3f0353d6a459196cb1fcba67f7b3d14c7ea6ebd6e4dddf103705a"
     },
     {
+      "path": "src/command-home.css",
+      "size": 13270,
+      "sha256": "cd5d3bebbbbcd8f1708d4f54ee56763d351a9fe819cf3c5b24b1c1703cff5c1a"
+    },
+    {
       "path": "src/components/layout/GameLayout.tsx",
-      "size": 3505,
-      "sha256": "df6ca8d8f8f2e1728f1f229d6b6b221183976ee311319147b4c24f4e10b11520"
+      "size": 4299,
+      "sha256": "dcb8085919b917d5737da1b5344a175b663d557ed7101d1249f7fc9adf0edaeb"
     },
     {
       "path": "src/data/battleEngine.ts",
@@ -440,6 +617,11 @@
       "path": "src/data/calculations.ts",
       "size": 1977,
       "sha256": "a093ca4e9f3053f6ff5a5db02805fe04256d0b06602831eddc4aaddb926d4819"
+    },
+    {
+      "path": "src/data/dailyMissions.ts",
+      "size": 1793,
+      "sha256": "41936489caf3abb50450345bdb93b46f1d93cebcc8ec22871072f7d666fb714f"
     },
     {
       "path": "src/data/enemies.ts",
@@ -482,9 +664,14 @@
       "sha256": "159499becf10fc8ba5244cb93d058a9ef0f68b96edeb5ef738c14138af63504a"
     },
     {
+      "path": "src/frontier-shell.css",
+      "size": 9654,
+      "sha256": "24a773cfed259be1403df6c9ab92ea83fb1b4cafa8ad5ddf79c150249f304418"
+    },
+    {
       "path": "src/main.tsx",
-      "size": 232,
-      "sha256": "055735c1f2a805ceeca8a1376b884c7a8ae1b9d69ad42753b2d23b4e277bfebb"
+      "size": 292,
+      "sha256": "15caa569d99580a6330814e3b816b5825a5509f80462b6080faf2f4d9760d33d"
     },
     {
       "path": "src/pages/AdminPage.tsx",
@@ -508,8 +695,8 @@
     },
     {
       "path": "src/pages/HomePage.tsx",
-      "size": 7956,
-      "sha256": "49b25d6ac3d9029302cb228a4ee548d5001d0accbffa9624208978f27211a596"
+      "size": 8653,
+      "sha256": "95ebdcdc62b614afb56b1f83a21ff93a8e98704d1322e3b3e4ba1a4ac8d3a2f5"
     },
     {
       "path": "src/pages/OptionPage.tsx",
@@ -568,18 +755,23 @@
     },
     {
       "path": "src/store/gameStore.ts",
-      "size": 36621,
-      "sha256": "6006bbb6b76c2f627d7d7cd6bcb8c6ae886d5450e4dce10a92e90bcb379a60de"
+      "size": 38249,
+      "sha256": "39d55fa0618dea17f61905efdbea6614e2993f48ebd8fdbd0eb15e3abf65da56"
     },
     {
       "path": "src/styles.css",
-      "size": 116606,
-      "sha256": "3e5e523817b2a5a23d57408c693fb36e5eda369a5841fcf2461e5e41641c7496"
+      "size": 127085,
+      "sha256": "02ad9956f08a71623c4ed0ca8e38640d64230549e3602bcd9bb3edda8913de5e"
     },
     {
       "path": "src/types/game.ts",
       "size": 6288,
       "sha256": "5632d4e4d7cabfc137f0479f75b6d212c2f3cb559a0692a80d26b343b7398925"
+    },
+    {
+      "path": "tests/daily-missions.test.mjs",
+      "size": 1695,
+      "sha256": "fee3e47e1120ceb5acb287e250606a9620bc852581d3b13c30298de18fe1b533"
     },
     {
       "path": "tsconfig.app.json",

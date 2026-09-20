@@ -1,3 +1,4 @@
+import { advanceDaily, currentDaily, claimDailyReward, freshDaily, type DailyKey, type DailyProgress } from '../data/dailyMissions';
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { adaptPilotToType } from '../data/pilotAdjust';
@@ -156,6 +157,8 @@ function applyBattleResult(pilot: PlayerPilot, battle: BattleState, catalog: Cat
 }
 
 interface GameState {
+  daily: DailyProgress;
+  claimDaily: (key: DailyKey) => boolean;
   page: PageId;
   hasEnteredGame: boolean;
   draftPilotId: string | null;
@@ -300,6 +303,7 @@ const legacyInitial = loadLegacySnapshot();
 export const useGameStore = create<GameState>()(
   persist(
     (set, get) => ({
+      daily: freshDaily(),
       page: 'home',
       hasEnteredGame: false,
       draftPilotId: null,
@@ -345,6 +349,7 @@ export const useGameStore = create<GameState>()(
             spirits: selectedType === '리얼계' ? ['집중', '열혈', '가속'] : ['필중', '철벽', '열혈'],
             records: { scenarioWins: 0, pvpStreak: 0 },
           },
+          daily: freshDaily(),
           pilotRoster: [],
           battle: null,
           page: 'home',
@@ -352,6 +357,13 @@ export const useGameStore = create<GameState>()(
           draftPilotId: null,
           draftType: null,
         });
+      },
+      claimDaily: (key) => {
+        const state = get();
+        const reward = claimDailyReward(state.daily, key);
+        if (!state.pilot || !reward) return false;
+        set({ daily: reward.daily, pilot: { ...state.pilot, credit: state.pilot.credit + reward.credit, pp: state.pilot.pp + reward.pp } });
+        return true;
       },
       trainStat: (key) => {
         const pilot = get().pilot;
@@ -443,7 +455,7 @@ export const useGameStore = create<GameState>()(
         const cost = upgradeCost(upgrades[key], key);
         if (pilot.credit < cost) return false;
         const next = { ...upgrades, [key]: upgrades[key] + 1 };
-        set({ pilot: { ...pilot, credit: pilot.credit - cost, upgrades: { ...pilot.upgrades, [unitId]: next } } });
+        set({ daily: advanceDaily(get().daily, { upgrade: 1 }), pilot: { ...pilot, credit: pilot.credit - cost, upgrades: { ...pilot.upgrades, [unitId]: next } } });
         return true;
       },
       togglePart: (unitId, partId) => {
@@ -487,28 +499,40 @@ export const useGameStore = create<GameState>()(
         if (!state.battle || !state.pilot) return;
         const battle = moveBattle(state.battle, delta, state.pilot, state.catalog.customWeapons);
         const finalized = applyBattleResult(state.pilot, battle, state.catalog);
-        set({ battle: finalized.battle, pilot: finalized.pilot });
+        set({ battle: finalized.battle, pilot: finalized.pilot, daily: advanceDaily(state.daily, {
+          kills: finalized.pilot.kills - state.pilot.kills,
+          sortie: finalized.pilot.records.scenarioWins - state.pilot.records.scenarioWins,
+        }) });
       },
       battleAttack: (weaponId) => {
         const state = get();
         if (!state.battle || !state.pilot) return;
         const battle = attackBattle(state.battle, weaponId, state.pilot, state.catalog.customWeapons);
         const finalized = applyBattleResult(state.pilot, battle, state.catalog);
-        set({ battle: finalized.battle, pilot: finalized.pilot });
+        set({ battle: finalized.battle, pilot: finalized.pilot, daily: advanceDaily(state.daily, {
+          kills: finalized.pilot.kills - state.pilot.kills,
+          sortie: finalized.pilot.records.scenarioWins - state.pilot.records.scenarioWins,
+        }) });
       },
       battleGuard: () => {
         const state = get();
         if (!state.battle || !state.pilot) return;
         const battle = guardBattle(state.battle, state.pilot, state.catalog.customWeapons);
         const finalized = applyBattleResult(state.pilot, battle, state.catalog);
-        set({ battle: finalized.battle, pilot: finalized.pilot });
+        set({ battle: finalized.battle, pilot: finalized.pilot, daily: advanceDaily(state.daily, {
+          kills: finalized.pilot.kills - state.pilot.kills,
+          sortie: finalized.pilot.records.scenarioWins - state.pilot.records.scenarioWins,
+        }) });
       },
       battleAuto: () => {
         const state = get();
         if (!state.battle || !state.pilot) return;
         const battle = autoBattle(state.battle, state.pilot, state.catalog.customWeapons);
         const finalized = applyBattleResult(state.pilot, battle, state.catalog);
-        set({ battle: finalized.battle, pilot: finalized.pilot });
+        set({ battle: finalized.battle, pilot: finalized.pilot, daily: advanceDaily(state.daily, {
+          kills: finalized.pilot.kills - state.pilot.kills,
+          sortie: finalized.pilot.records.scenarioWins - state.pilot.records.scenarioWins,
+        }) });
       },
       useSpirit: (spirit) => {
         const state = get();
@@ -541,7 +565,7 @@ export const useGameStore = create<GameState>()(
           id: uid('pvp'), opponentName: opponent.display, opponentUnitId: opponent.unitId, opponentLevel: opponent.level,
           won: duel.playerWin, credit, exp, createdAt: new Date().toISOString(), log: [...duel.log, '', duel.playerWin ? `승리 · +${credit.toLocaleString()}C / EXP +${exp}` : `패배 · 참가보상 +${credit.toLocaleString()}C / EXP +${exp}`],
         };
-        set({ pilot: leveled.pilot, pvpResults: [result, ...state.pvpResults].slice(0, 20) });
+        set({ daily: advanceDaily(state.daily, { pvp: 1 }), pilot: leveled.pilot, pvpResults: [result, ...state.pvpResults].slice(0, 20) });
         return result;
       },
       createAiTournament: () => {
@@ -686,13 +710,14 @@ export const useGameStore = create<GameState>()(
           if (!raw.pilot && Array.isArray(raw.users)) {
             const legacy = snapshotFromLegacyData(raw);
             if (!legacy) return false;
-            set({ pilot: legacy.pilot, pilotRoster: legacy.pilotRoster, catalog: legacy.catalog, settings: legacy.settings, battle: null, pvpResults: [], tournaments: [], page: 'home', hasEnteredGame: true });
+            set({ daily: freshDaily(), pilot: legacy.pilot, pilotRoster: legacy.pilotRoster, catalog: legacy.catalog, settings: legacy.settings, battle: null, pvpResults: [], tournaments: [], page: 'home', hasEnteredGame: true });
             return true;
           }
           const incomingPilot = data.pilot as PlayerPilot | null | undefined;
           if (!incomingPilot) return false;
           const normalizedPilot = normalizePilot(incomingPilot);
           set({
+            daily: currentDaily(data.daily),
             pilot: normalizedPilot,
             pilotRoster: Array.isArray(data.pilotRoster) ? data.pilotRoster.map(normalizePilot) : [],
             battle: null,
@@ -707,14 +732,14 @@ export const useGameStore = create<GameState>()(
           return false;
         }
       },
-      resetGame: () => set({ page: 'home', hasEnteredGame: false, draftPilotId: null, draftType: null, pilot: null, pilotRoster: [], battle: null, pvpResults: [], tournaments: [], catalog: emptyCatalog }),
+      resetGame: () => set({ daily: freshDaily(), page: 'home', hasEnteredGame: false, draftPilotId: null, draftType: null, pilot: null, pilotRoster: [], battle: null, pvpResults: [], tournaments: [], catalog: emptyCatalog }),
     }),
     {
       name: 'rwf-react-v0.9-save',
-      partialize: (state) => ({ pilot: state.pilot, pilotRoster: state.pilotRoster, page: state.page, pvpResults: state.pvpResults, tournaments: state.tournaments, catalog: state.catalog, settings: state.settings }),
+      partialize: (state) => ({ daily: state.daily, pilot: state.pilot, pilotRoster: state.pilotRoster, page: state.page, pvpResults: state.pvpResults, tournaments: state.tournaments, catalog: state.catalog, settings: state.settings }),
       merge: (persisted, current) => {
         const incoming = persisted as Partial<GameState>;
-        return { ...current, ...incoming, pilot: Object.prototype.hasOwnProperty.call(incoming, 'pilot') ? (incoming.pilot ? normalizePilot(incoming.pilot) : null) : current.pilot, pilotRoster: Object.prototype.hasOwnProperty.call(incoming, 'pilotRoster') ? (incoming.pilotRoster?.map(normalizePilot) ?? []) : current.pilotRoster, catalog: Object.prototype.hasOwnProperty.call(incoming, 'catalog') ? (incoming.catalog ?? emptyCatalog) : current.catalog, pvpResults: incoming.pvpResults ?? [], tournaments: incoming.tournaments ?? [], settings: incoming.settings ?? current.settings, battle: null, hasEnteredGame: false };
+        return { ...current, ...incoming, daily: currentDaily(incoming.daily), pilot: Object.prototype.hasOwnProperty.call(incoming, 'pilot') ? (incoming.pilot ? normalizePilot(incoming.pilot) : null) : current.pilot, pilotRoster: Object.prototype.hasOwnProperty.call(incoming, 'pilotRoster') ? (incoming.pilotRoster?.map(normalizePilot) ?? []) : current.pilotRoster, catalog: Object.prototype.hasOwnProperty.call(incoming, 'catalog') ? (incoming.catalog ?? emptyCatalog) : current.catalog, pvpResults: incoming.pvpResults ?? [], tournaments: incoming.tournaments ?? [], settings: incoming.settings ?? current.settings, battle: null, hasEnteredGame: false };
       },
     },
   ),
