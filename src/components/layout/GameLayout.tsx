@@ -10,7 +10,7 @@ const nav: Array<[PageId, string, string, string]> = [
   ['hangar','기체 개발','DEVELOP','develop'],
   ['parts','강화파츠','CUSTOMIZE','parts'],
   ['scenario','작전 출격','SORTIE','sortie'],
-  ['pvp','PvP','ARENA','pvp'],
+  ['pvp','PvP','PVP','pvp'],
   ['tourney','대회','TOURNAMENT','tourney'],
   ['shop','상점','SHOP','shop'],
   ['encyclopedia','도감','ARCHIVE','archive'],
@@ -33,7 +33,7 @@ export function GameLayout({ children }: { children: ReactNode }) {
           <div className="rwf-brand-title">
             <img className="rwf-logo-image" src="/assets/ui/rwf_logo.png" alt="ROBOT WARS FRONTIER" />
           </div>
-          <div className="rwf-brand-motto"><b>인류의 의지로, 기체에.</b><small>BEYOND THE BATTLEFIELD.</small></div>
+          <div className="rwf-brand-motto"><b>BEYOND THE BATTLEFIELD.</b><small>A BRIGHTER TOMORROW.</small></div>
         </div>
 
         <div className="rwf-resource-strip" aria-label="보유 자원">
@@ -53,7 +53,7 @@ export function GameLayout({ children }: { children: ReactNode }) {
           <button aria-label="작전 출격" title="작전 출격" onClick={() => setPage('scenario')}><img src="/assets/ui/icon_sortie.svg" alt="" /></button>
           <button aria-label="파일럿 관리" title="파일럿 관리" onClick={() => setPage('pilot')}><img src="/assets/ui/icon_pilot.svg" alt="" /></button>
           <button aria-label="설정" title="설정" onClick={() => setPage('option')}><img src="/assets/ui/icon_setting.svg" alt="" /></button>
-          <small>v0.9.13</small>
+          <small>v0.9.14</small>
         </div>
       </header>
 
@@ -70,7 +70,7 @@ export function GameLayout({ children }: { children: ReactNode }) {
           <img className="rwf-sidebar-emblem" src="/assets/ui/emblem_ef_v2.svg" alt="" aria-hidden="true" />
           <b>E.F. FORCE</b>
           <small>A SAFE TOMORROW<br/>FOR ALL HUMANITY.</small>
-          <em>React v0.9.13</em>
+          <em>React v0.9.14</em>
         </div>
       </aside>
 

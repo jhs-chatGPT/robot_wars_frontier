@@ -1,31 +1,32 @@
-# v0.9.13 design QA
+# v0.9.14 / 9271 design QA
 
 final result: blocked
 
-Source: approved 9213.png, 16:9 home console.
-Target: 1920×1080. Secondary authored breakpoints: 1600, 1200, 850px, short viewport <=700px.
+Reference: docs/reference-9271.jpg
+Target viewport: 1920×1080, 100% browser zoom.
 
-Completed:
-- Replaced four-band home with the approved three-band composition.
-- Reused existing pilot/unit artwork, menu icon assets, and navigation routes.
-- Generated one reusable raster metal panel frame; no screenshot-as-UI overlay.
-- Daily progress and reward logic: four Node tests passed.
-- New store/module syntax checked with Node TypeScript stripping.
-- New static asset paths resolved.
+Changes reviewed in source:
+- Reference panel proportions and desktop outer gutters.
+- Independent gold sortie CTA and blue metal button PNGs.
+- Metal raster frame applied to home HUD/rail/footer.
+- Orbital drydock illustration applied to space mission and event preview.
+- Semantic React text/buttons remain independent of raster assets.
+- Current pilot/unit content, routes, and prior daily mission behavior retained.
 
-Blocked:
-- npm install received HTTP 403 from registry; no dependency cache was available.
-- Full TypeScript typecheck and Vite build have NOT passed.
-- Cloud browser was unavailable. No prototype screenshot, source/render comparison, or interactive browser test was performed.
+Checks completed:
+- New PNG files decode successfully.
+- Seven static asset paths resolve.
+- CSS block delimiters balance.
+- Cumulative patch reconstructs full ZIP from v0.9.12 (verified during packaging).
 
-Fidelity limits:
-- Existing project character/unit art is retained, so it differs from concept illustrations.
-- Existing shell graphics are retained; home dimensions are adjusted to match the selected composition.
-- Events are marked upcoming because no real event configuration exists.
+Unverified:
+- npm dependency installation was blocked by HTTP 403 in this environment; no successful full TypeScript or Vite build exists.
+- No cloud browser available; no implementation screenshot was captured and no side-by-side source/render comparison performed.
+- Browser interactions, contrast, mobile reflow and clipping need runtime verification.
 
-Required before release:
-- npm install; npm run build.
-- Compare home at 1920×1080 against 9213.png and fix clipping/spacing/material differences.
-- Check 1536×864, 1280×720, 768×1024 and 390×844.
-- Verify current unit detail, six shortcuts, operation list, notice dialog keyboard behavior.
-- Verify upgrade/PvP/scenario actions increment daily counters, one-time reward, save/load and KST rollover.
+Not exact screenshot reproduction:
+- Actual player data and original project pilot/mech art remain in use.
+- No real online event exists; the event tile says upcoming and has no fabricated active dates.
+- Shell styling changes in this revision are scoped to home; other screens retain their existing layouts.
+
+Do not treat historical validation reports as validation of v0.9.14.
