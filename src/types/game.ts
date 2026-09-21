@@ -1,4 +1,5 @@
 export type PilotType = '리얼계' | '슈퍼계';
+export type BloodType = 'A' | 'B' | 'O' | 'AB';
 export type Gender = '남' | '여';
 export type BattleAI = '균형형' | '공격형' | '방어형' | '회피형' | '지원형';
 export type PageId =
@@ -45,6 +46,10 @@ export type PilotTemplate = {
   stats: PilotStats;
   terrain: Terrain;
   special: string[];
+  birthYear?: number;
+  birthMonth?: number;
+  birthDay?: number;
+  bloodType?: BloodType;
 };
 
 export type UnitTemplate = {

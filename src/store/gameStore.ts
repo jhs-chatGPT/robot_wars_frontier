@@ -2,6 +2,7 @@ import { advanceDaily, currentDaily, claimDailyReward, freshDaily, type DailyKey
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { adaptPilotToType } from '../data/pilotAdjust';
+import { deriveSpirits } from '../data/spiritSetup';
 import { blankUpgrades, partMods, upgradeCost } from '../data/calculations';
 import { partTemplates } from '../data/parts';
 import { pilotTemplates } from '../data/pilots';
@@ -346,7 +347,9 @@ export const useGameStore = create<GameState>()(
             equippedParts: {},
             scenarioClears: [],
             terrainCount: { air: 0, land: 0, water: 0, space: 0 },
-            spirits: selectedType === '리얼계' ? ['집중', '열혈', '가속'] : ['필중', '철벽', '열혈'],
+            spirits: template.birthYear && template.birthMonth && template.birthDay && template.bloodType
+              ? deriveSpirits(template.birthYear, template.birthMonth, template.birthDay, template.bloodType, selectedType)
+              : (selectedType === '리얼계' ? ['집중', '열혈', '가속'] : ['필중', '철벽', '열혈']),
             records: { scenarioWins: 0, pvpStreak: 0 },
           },
           daily: freshDaily(),
