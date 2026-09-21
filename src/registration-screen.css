@@ -9,3 +9,369 @@
 .machine-layout{position:relative;z-index:2;height:81.4vh;display:grid;grid-template-columns:25% 43% 32%;gap:.75vw;padding:1.25vh 1.1vw 1.15vh}.selected-pilot-summary,.machine-candidate-panel,.machine-detail-panel{overflow:hidden}.summary-visual{height:49%;position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(8,31,50,.4),rgba(4,14,24,.94)),url('/assets/backgrounds/bg-hangar.webp') center/cover}.summary-face{position:absolute;left:-5%;top:-2%;width:80%;height:82%;object-fit:cover;object-position:center 18%;mask-image:linear-gradient(180deg,#000 72%,transparent)}.summary-body{position:absolute;right:-3%;bottom:0;width:55%;height:93%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 10px 14px rgba(0,0,0,.45))}.summary-copy{padding:1.4vh 1.2vw}.summary-copy h2{font-size:clamp(24px,1.7vw,36px);margin:0 0 .4vh}.summary-copy>small{color:#7ca8c2;font-size:clamp(9px,.58vw,12px)}.summary-type{display:inline-block;margin:1.2vh 0;padding:.55vh .65vw;border:1px solid #45c9ff;background:#0a4167;color:#a6e9ff;font-size:clamp(10px,.64vw,13px);font-weight:800}.summary-type.super{border-color:#d98a6c;background:#49251c;color:#ffc4aa}.summary-copy dl{margin:1vh 0 0;border-top:1px solid #29465a}.summary-copy dl>div{display:flex;justify-content:space-between;padding:.8vh 0;border-bottom:1px solid #223b4e}.summary-copy dt{color:#718fa2;font-size:clamp(9px,.56vw,12px)}.summary-copy dd{margin:0;color:#d9e9f2;font-size:clamp(10px,.62vw,13px)}.machine-card-grid{height:calc(100% - 8vh);display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:.85vh .65vw;padding:1.2vh .9vw}.machine-choice-card{min-width:0;min-height:0;border:1px solid #36566d;background:linear-gradient(180deg,#081724,#06111c);display:grid;grid-template-rows:1fr auto;overflow:hidden;padding:0;color:#d8e7f0;text-align:left;cursor:pointer}.machine-choice-card.selected{border-color:#61d8ff;box-shadow:inset 0 0 0 1px #65d9ff,0 0 18px rgba(43,181,255,.3);background:linear-gradient(180deg,#0b2740,#081722)}.machine-choice-card img{width:100%;height:100%;min-height:0;object-fit:contain;background:radial-gradient(circle at 50% 45%,rgba(31,96,137,.42),rgba(3,10,16,.9) 66%)}.machine-choice-card span{padding:.75vh .8vw;border-top:1px solid #28465a;display:grid;grid-template-columns:1fr auto;gap:.25vh .4vw}.machine-choice-card span small{grid-column:1/3;color:#73a9c8;font-size:clamp(8px,.48vw,10px)}.machine-choice-card span b{font-size:clamp(15px,1vw,21px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.machine-choice-card span em{font-style:normal;color:#7c97a8;font-size:clamp(8px,.5vw,11px);align-self:end}.machine-detail-panel{display:flex;flex-direction:column}.machine-hero{height:35%;position:relative;background:radial-gradient(circle at 62% 46%,rgba(32,106,153,.45),rgba(3,12,21,.96) 70%);overflow:hidden}.machine-hero img{position:absolute;right:-2%;top:0;width:67%;height:100%;object-fit:contain;filter:drop-shadow(0 15px 14px rgba(0,0,0,.48))}.machine-hero div{position:absolute;left:1.4vw;bottom:2.1vh;z-index:2;max-width:53%}.machine-hero small{display:block;color:#6ca7c9;font-size:clamp(9px,.56vw,12px);letter-spacing:.06em}.machine-hero h1{font-size:clamp(28px,2vw,42px);line-height:1;margin:.55vh 0 .7vh}.machine-hero span{display:inline-block;border:1px solid #4fbfe9;padding:.35vh .55vw;color:#8fddfb;background:rgba(6,67,103,.64);font-size:clamp(9px,.55vw,12px)}.machine-spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid #26485e;border-bottom:1px solid #26485e}.machine-spec-grid>div{display:flex;justify-content:space-between;padding:.82vh 1.15vw;border-bottom:1px solid rgba(39,72,94,.72)}.machine-spec-grid>div:nth-child(odd){border-right:1px solid rgba(39,72,94,.72)}.machine-spec-grid span{color:#6f92a8;font-size:clamp(9px,.56vw,12px)}.machine-spec-grid b{color:#ddecf5;font-size:clamp(10px,.66vw,14px)}.machine-abilities{padding:1.2vh 1.15vw;display:flex;gap:.5vw;flex-wrap:wrap;align-content:flex-start}.machine-abilities>small{width:100%;color:#5fa9d0;letter-spacing:.18em;font-size:clamp(8px,.48vw,10px);margin-bottom:.15vh}.machine-abilities>span{border:1px solid #32627d;background:#09253a;padding:.45vh .65vw;color:#b4d8eb;font-size:clamp(9px,.56vw,12px)}.registration-complete{margin:1vh 1vw 1.15vh;height:8.6vh;min-height:74px}.machine-detail-panel .registration-complete{margin-top:auto}
 @media (max-width:1280px),(max-height:760px){.setup-topbar{min-height:88px}.setup-panel-heading{min-height:58px}.pilot-setup-columns,.machine-layout{padding-top:.8vh;gap:.55vw}.setup-pilot-row{min-height:48px}.pilot-form{gap:.8vh;padding-top:1vh;padding-bottom:1vh}.type-choice{min-height:86px}.next-machine-button,.registration-complete{min-height:60px}.pilot-profile-copy p{display:none}.spirit-info-box small{display:none}}
 @media (max-width:900px){.pilot-setup-screen,.machine-setup-screen{overflow:auto;position:relative;min-height:100vh}.setup-topbar{grid-template-columns:1fr;height:auto;padding:15px 18px;gap:12px}.setup-brand,.setup-tagline{display:none}.setup-progress{width:100%;min-height:64px}.pilot-setup-columns,.machine-layout{height:auto;grid-template-columns:1fr;padding:10px}.setup-panel{min-height:560px}.pilot-list-panel{min-height:500px}.pilot-list-scroll{max-height:420px}.setup-pilot-row img{width:74px}.setup-pilot-row{grid-template-columns:74px 1fr 44px}.pilot-visual-panel{min-height:700px}.pilot-visual-stage{top:70px}.pilot-edit-panel{min-height:680px}.setup-bottomline{position:relative;height:54px}.machine-card-grid{height:620px}.machine-detail-panel{min-height:700px}}
+
+/* ========================================================================== */
+/* v0.9.18 — PILOT SETUP STRICT MOCKUP MATCH (desktop 16:9)                 */
+/* Reference: PROJECT NEXUS pilot-setup composition supplied by the user.     */
+/* The UI remains live React/CSS; this is not a baked screenshot.             */
+/* ========================================================================== */
+@media (min-width:901px){
+  .pilot-setup-screen{
+    background:#06111d;
+  }
+  .pilot-setup-screen .setup-backdrop{
+    background-image:
+      linear-gradient(180deg,rgba(4,12,22,.05),rgba(4,13,24,.18) 56%,rgba(2,8,15,.22)),
+      url('/assets/backgrounds/bg-hangar.webp');
+    background-position:center;
+    background-size:cover;
+    filter:saturate(1.05) brightness(1.16) contrast(1.01);
+  }
+  .pilot-setup-screen .setup-backdrop:after{
+    background:
+      linear-gradient(90deg,rgba(1,8,15,.23),transparent 16%,transparent 84%,rgba(1,8,15,.25)),
+      linear-gradient(180deg,rgba(2,9,17,.16),transparent 19%,transparent 82%,rgba(2,8,14,.25));
+  }
+
+  /* Header is intentionally airy/transparent like the chosen mockup. */
+  .pilot-setup-screen .setup-topbar{
+    height:14.25vh;
+    min-height:0;
+    display:block;
+    padding:0;
+    border-bottom:0;
+    background:linear-gradient(180deg,rgba(3,13,25,.42),rgba(3,13,25,.08) 78%,transparent);
+    box-shadow:none;
+  }
+  .pilot-setup-screen .setup-back-button{display:none}
+  .pilot-setup-screen .setup-brand{
+    position:absolute;
+    left:2.7vw;
+    top:1.8vh;
+    width:15vw;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:.25vh;
+    padding:0;
+  }
+  .pilot-setup-screen .setup-brand img{
+    width:8.8vw;
+    min-width:0;
+    max-height:none;
+    object-fit:contain;
+    object-position:left center;
+    filter:drop-shadow(0 0 9px rgba(60,174,255,.28));
+  }
+  .pilot-setup-screen .setup-brand b{display:none}
+  .pilot-setup-screen .setup-brand span{
+    margin:0;
+    padding-left:.15vw;
+    font-size:.48vw;
+    line-height:1;
+    letter-spacing:.22em;
+    color:#89c8ee;
+  }
+  .pilot-setup-screen .setup-progress{
+    position:absolute;
+    left:50%;
+    top:4.75vh;
+    transform:translateX(-50%);
+    width:48.2vw;
+    height:8.05vh;
+    min-height:0;
+    filter:drop-shadow(0 0 12px rgba(31,148,255,.20));
+  }
+  .pilot-setup-screen .setup-progress>i{
+    margin:0 -.28vw;
+    font-size:2.1vw;
+  }
+  .pilot-setup-screen .setup-step{
+    gap:.85vw;
+    padding:0 1.45vw;
+    border:1px solid rgba(109,159,199,.62);
+    background:linear-gradient(180deg,rgba(13,33,54,.90),rgba(5,17,31,.95));
+    clip-path:polygon(4.2% 0,94% 0,100% 50%,94% 100%,4.2% 100%,0 50%);
+  }
+  .pilot-setup-screen .setup-step strong{font-size:2.05vw}
+  .pilot-setup-screen .setup-step span{font-size:1.12vw}
+  .pilot-setup-screen .setup-step small{font-size:.5vw;margin-top:.2vh}
+  .pilot-setup-screen .setup-step.active{
+    background:linear-gradient(105deg,#092e50 0%,#0879c7 55%,#07335a 100%);
+    border-color:#89e2ff;
+    box-shadow:inset 0 0 0 1px rgba(89,211,255,.72),0 0 20px rgba(29,175,255,.42);
+  }
+  .pilot-setup-screen .setup-tagline{
+    position:absolute;
+    top:2.0vh;
+    right:2.45vw;
+  }
+  .pilot-setup-screen .setup-tagline b{font-size:.72vw}
+  .pilot-setup-screen .setup-tagline span{font-size:.45vw}
+
+  /* Exact 16:9 panel positions from the selected mockup. */
+  .pilot-setup-screen .pilot-setup-columns{
+    height:71.65vh;
+    display:grid;
+    grid-template-columns:26.2vw 39.7vw 29.7vw;
+    gap:.75vw;
+    padding:0;
+    margin:1.45vh 0 0 .90vw;
+    box-sizing:border-box;
+  }
+  .pilot-setup-screen .setup-panel{
+    border:1px solid rgba(112,191,238,.90);
+    background:linear-gradient(180deg,rgba(5,20,35,.96),rgba(3,14,25,.965));
+    box-shadow:
+      inset 0 0 0 1px rgba(27,76,108,.95),
+      inset 0 0 34px rgba(15,74,110,.10),
+      0 0 0 1px rgba(3,10,18,.85),
+      0 9px 25px rgba(0,0,0,.30),
+      0 0 18px rgba(26,142,210,.12);
+    clip-path:polygon(2.2% 0,97.7% 0,100% 2.5%,100% 97.4%,97.7% 100%,2.2% 100%,0 97.4%,0 2.5%);
+  }
+  .pilot-setup-screen .setup-panel:before{
+    left:1.2%;
+    top:0;
+    width:46%;
+    height:2px;
+    background:linear-gradient(90deg,#8be7ff 0%,#39c1ff 45%,transparent 100%);
+    box-shadow:0 0 10px rgba(49,194,255,.55);
+  }
+  .pilot-setup-screen .setup-panel:after{
+    content:'';
+    position:absolute;
+    inset:6px;
+    z-index:1;
+    pointer-events:none;
+    border-top:1px solid rgba(116,188,229,.22);
+    border-left:1px solid rgba(71,135,174,.16);
+    clip-path:polygon(1.5% 0,98.5% 0,100% 2%,100% 98%,98.5% 100%,1.5% 100%,0 98%,0 2%);
+  }
+  .pilot-setup-screen .setup-panel-heading{
+    height:7.35vh;
+    min-height:0;
+    gap:.68vw;
+    padding:0 1.25vw;
+    border-bottom:1px solid rgba(78,150,196,.62);
+    background:linear-gradient(100deg,rgba(9,50,82,.96),rgba(5,23,40,.86) 72%,rgba(5,18,32,.68));
+  }
+  .pilot-setup-screen .setup-panel-heading>span{
+    font-size:2vw;
+    line-height:1;
+  }
+  .pilot-setup-screen .setup-panel-heading h2{
+    font-size:1.42vw;
+    letter-spacing:-.035em;
+  }
+  .pilot-setup-screen .setup-panel-heading small{
+    font-size:.50vw;
+    margin-top:.35vh;
+  }
+  .pilot-setup-screen .setup-panel-heading>b{font-size:.73vw}
+
+  /* LEFT — compact pilot list with mockup-sized portraits and rows. */
+  .pilot-setup-screen .pilot-list-scroll{
+    padding:.68vh .70vw .55vh;
+  }
+  .pilot-setup-screen .setup-pilot-row{
+    height:7.28vh;
+    min-height:0;
+    grid-template-columns:5.9vw 1fr 2.6vw;
+    margin:0 0 .46vh;
+    border-color:rgba(66,105,132,.92);
+    background:linear-gradient(90deg,rgba(7,25,41,.98),rgba(5,17,30,.96));
+  }
+  .pilot-setup-screen .setup-pilot-row img{
+    width:5.9vw;
+    height:100%;
+    object-position:center 20%;
+  }
+  .pilot-setup-screen .setup-pilot-row>span{padding:0 .9vw}
+  .pilot-setup-screen .setup-pilot-row b{font-size:.92vw}
+  .pilot-setup-screen .setup-pilot-row small{font-size:.59vw;margin-top:.25vh}
+  .pilot-setup-screen .setup-pilot-row em{font-size:.67vw}
+  .pilot-setup-screen .setup-pilot-row.selected{
+    border-color:#64d8ff;
+    background:linear-gradient(90deg,rgba(13,99,159,.96),rgba(8,48,80,.94));
+    box-shadow:inset 0 0 0 1px rgba(110,226,255,.78),0 0 14px rgba(33,179,255,.38);
+  }
+  .pilot-setup-screen .setup-pilot-row.selected em:after{content:'  »';color:#a7ecff}
+  .pilot-setup-screen .list-footer-copy{display:none}
+
+  /* CENTER — face + full body are composed like the selected mockup. */
+  .pilot-setup-screen .pilot-visual-panel{overflow:hidden}
+  .pilot-setup-screen .pilot-visual-stage{
+    top:7.35vh;
+    background:
+      radial-gradient(circle at 77% 33%,rgba(58,140,192,.20),transparent 29%),
+      linear-gradient(180deg,rgba(7,27,45,.16),rgba(3,15,27,.72) 68%,rgba(3,12,22,.98) 100%),
+      url('/assets/backgrounds/bg-hangar.webp') center/cover;
+  }
+  .pilot-setup-screen .pilot-portrait-large{
+    left:-1.5%;
+    top:1.0%;
+    width:57%;
+    height:58.5%;
+    object-fit:cover;
+    object-position:center 15%;
+    mask-image:linear-gradient(180deg,#000 79%,transparent 100%);
+  }
+  .pilot-setup-screen .pilot-fullbody-large{
+    right:1.4%;
+    top:1.0%;
+    width:47.5%;
+    height:80.5%;
+    object-fit:contain;
+    object-position:center bottom;
+    filter:drop-shadow(0 16px 15px rgba(0,0,0,.46));
+  }
+  .pilot-setup-screen .portrait-shade{
+    background:
+      linear-gradient(90deg,transparent 0,transparent 42%,rgba(4,16,29,.06) 55%,rgba(3,13,24,.30) 100%),
+      linear-gradient(180deg,transparent 50%,rgba(3,13,24,.34) 61%,rgba(3,12,22,.92) 82%,rgba(3,11,20,.98));
+  }
+  .pilot-setup-screen .pilot-visual-stage blockquote{
+    left:4.7%;
+    top:45.8%;
+    width:43%;
+    font-size:1.00vw;
+    line-height:1.52;
+  }
+  .pilot-setup-screen .pilot-profile-copy{
+    left:4.5%;
+    right:4.0%;
+    bottom:2.6%;
+    height:34.8%;
+  }
+  .pilot-setup-screen .pilot-profile-copy h1{
+    font-size:2.05vw;
+    margin-bottom:.25vh;
+  }
+  .pilot-setup-screen .pilot-title-line{
+    font-size:.76vw;
+    padding-bottom:.75vh;
+  }
+  .pilot-setup-screen .pilot-profile-copy dl{
+    margin:1.0vh 0 .8vh;
+  }
+  .pilot-setup-screen .pilot-profile-copy dt{font-size:.56vw}
+  .pilot-setup-screen .pilot-profile-copy dd{font-size:.64vw}
+  .pilot-setup-screen .pilot-profile-copy p{
+    font-size:.64vw;
+    line-height:1.5;
+    -webkit-line-clamp:2;
+  }
+
+  /* RIGHT — form is deliberately simple, spacious and close to mockup. */
+  .pilot-setup-screen .pilot-form{
+    padding:2.05vh 1.75vw 1.65vh;
+    gap:1.55vh;
+  }
+  .pilot-setup-screen .split-name{
+    grid-template-columns:1fr 1fr;
+    gap:.9vw;
+  }
+  .pilot-setup-screen .split-name label{
+    grid-template-columns:3.1vw 1fr;
+    gap:.5vw;
+  }
+  .pilot-setup-screen .split-name label>span,
+  .pilot-setup-screen .form-label{
+    font-size:.79vw;
+  }
+  .pilot-setup-screen .pilot-form input,
+  .pilot-setup-screen .pilot-form select{
+    height:4.65vh;
+    min-height:0;
+    font-size:.82vw;
+    border-color:#55758d;
+    background:linear-gradient(180deg,rgba(7,22,37,.99),rgba(5,15,27,.99));
+  }
+  .pilot-setup-screen .birth-row{
+    grid-template-columns:5.1vw 1.42fr 1fr 1fr;
+    gap:.55vw;
+  }
+  .pilot-setup-screen .button-row{
+    grid-template-columns:5.1vw 1fr;
+    gap:.55vw;
+  }
+  .pilot-setup-screen .four-buttons{gap:.48vw}
+  .pilot-setup-screen .four-buttons button{
+    height:4.55vh;
+    min-height:0;
+    font-size:.82vw;
+  }
+  .pilot-setup-screen .type-select-row{gap:.72vh}
+  .pilot-setup-screen .type-select-cards{gap:.60vw}
+  .pilot-setup-screen .type-choice{
+    height:5.65vh;
+    min-height:0;
+    display:grid;
+    place-items:center;
+    padding:0;
+    grid-template-columns:1fr;
+    grid-template-rows:1fr;
+    text-align:center;
+    border-color:#617b8e;
+  }
+  .pilot-setup-screen .type-choice .type-emblem,
+  .pilot-setup-screen .type-choice small,
+  .pilot-setup-screen .type-choice em{display:none}
+  .pilot-setup-screen .type-choice b{
+    font-size:1.02vw;
+    line-height:1;
+  }
+  .pilot-setup-screen .type-choice.selected.real{
+    border-color:#6ee1ff;
+    background:linear-gradient(180deg,#0a446f,#08253f);
+    box-shadow:inset 0 0 0 1px #7ee8ff,0 0 13px rgba(34,177,255,.35);
+  }
+  .pilot-setup-screen .type-choice.selected.super{
+    border-color:#ef8768;
+    background:linear-gradient(180deg,#4a211c,#251417);
+  }
+  .pilot-setup-screen .spirit-info-box{
+    min-height:6.25vh;
+    grid-template-columns:2.05vw 1fr;
+    padding:.75vh .9vw;
+    gap:.65vw;
+  }
+  .pilot-setup-screen .spirit-info-box>span{
+    width:1.75vw;
+    height:1.75vw;
+    min-width:0;
+    min-height:0;
+    font-size:.8vw;
+  }
+  .pilot-setup-screen .spirit-info-box b{font-size:.70vw}
+  .pilot-setup-screen .spirit-info-box p{font-size:.57vw;margin:.18vh 0 0}
+  .pilot-setup-screen .spirit-info-box small{display:none}
+  .pilot-setup-screen .next-machine-button{
+    width:calc(100% - .55vw);
+    align-self:center;
+    height:8.75vh;
+    min-height:0;
+    margin-top:1.15vh;
+    margin-left:auto;
+    margin-right:auto;
+    clip-path:polygon(5% 0,95% 0,100% 50%,95% 100%,5% 100%,0 50%);
+    background:linear-gradient(105deg,#075e9e,#0b82d6 56%,#075e9e);
+    border-color:#a7efff;
+    box-shadow:inset 0 0 0 2px rgba(114,224,255,.50),0 0 24px rgba(20,152,235,.38);
+  }
+  .pilot-setup-screen .next-machine-button>span{font-size:1.23vw}
+  .pilot-setup-screen .next-machine-button>small{font-size:.48vw}
+  .pilot-setup-screen .next-machine-button>b{font-size:2vw}
+
+  /* Bottom copy floats over the background instead of becoming a thick bar. */
+  .pilot-setup-screen .setup-bottomline{
+    height:8.0vh;
+    min-height:0;
+    padding:0 2.8vw;
+    background:transparent;
+    border-top:0;
+  }
+  .pilot-setup-screen .setup-bottomline span{font-size:.46vw}
+  .pilot-setup-screen .setup-bottomline b{font-size:.56vw;color:#9fc4da}
+}
