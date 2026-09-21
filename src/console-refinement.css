@@ -12,6 +12,7 @@
 .rwf-shell[data-page="home"] .rwf-sidebar nav .console-menu-button.active {
   background: #064b80 url('/ui/shortcut-blue.png') center/100% 100% no-repeat;
   filter:brightness(1.65) saturate(1.3);box-shadow:inset 0 0 26px #0798ffbb,0 0 12px #008dff88;
+    border-radius: 18px;
 }
 .rwf-shell .console-menu-button.active .rwf-nav-icon img {filter:drop-shadow(0 0 8px #55dbff)}
 .rwf-shell .console-menu-button:focus-visible{outline:3px solid #b1f8ff;outline-offset:-6px}

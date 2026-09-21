@@ -4,7 +4,10 @@ import { starterUnitIds, unitTemplates } from '../data/units';
 import { useGameStore } from '../store/gameStore';
 import type { PilotType } from '../types/game';
 
-type Step = 'title' | 'pilot' | 'type' | 'unit';
+import { OptionPage } from './OptionPage';
+import '../title-screen.css';
+
+type Step = 'title' | 'catalog' | 'options' | 'pilot' | 'type' | 'unit';
 
 export function StartPage() {
   const savedPilot = useGameStore((s) => s.pilot);
@@ -13,6 +16,7 @@ export function StartPage() {
   const completeRegistration = useGameStore((s) => s.completeRegistration);
   const enterGame = useGameStore((s) => s.enterGame);
   const [step, setStep] = useState<Step>('title');
+  const [selectedMenu, setSelectedMenu] = useState(0);
   const [pilotId, setPilotId] = useState(pilotTemplates[0].id);
   const [type, setType] = useState<PilotType>('리얼계');
   const [unitId, setUnitId] = useState('u1');
@@ -27,21 +31,40 @@ export function StartPage() {
     if (first) setUnitId(first.id);
   };
 
+  if (step === 'options') return <section className="title-subpage"><button className="title-back" autoFocus onClick={() => setStep('title')}>시작 화면으로</button><OptionPage /></section>;
+
+  if (step === 'catalog') return <section className="registration-screen">
+    <header><small>PILOT ARCHIVE</small><h2>파일럿 도감</h2></header>
+    <div className="pilot-grid">{pilotTemplates.map((p) => <button key={p.id} className={`pilot-card ${pilotId === p.id ? 'selected' : ''}`} onClick={() => setPilotId(p.id)}><img src={p.avatar} alt=""/><span><b>{p.display}</b><small>{p.title}</small></span></button>)}</div>
+    <div className="pilot-detail"><img src={pilot.fullbody} alt={pilot.display}/><div><small>{pilot.affiliation} · {pilot.rank}</small><h3>{pilot.display}</h3><em>“{pilot.quote}”</em><p>{pilot.desc}</p><div className="chip-row">{pilot.special.map((x) => <span key={x}>{x}</span>)}</div></div></div>
+    <footer><button onClick={() => setStep('title')}>시작 화면으로</button></footer>
+  </section>;
+
   if (step === 'title') {
-    return (
-      <div className="start-title">
-        <div className="title-glow" />
-        <div className="title-copy">
-          <small>TACTICAL ROBOT SIMULATION</small>
-          <h1>ROBOT WARS<br/><span>FRONTIER</span></h1>
-          <p>전장을 개척하고, 파일럿과 기체를 성장시켜 새로운 전선에 도전하세요.</p>
-          <div className="title-actions">
-            <button className="primary" onClick={() => setStep('pilot')}>처음부터 시작</button>
-            <button disabled={!savedPilot} onClick={() => savedPilot && enterGame()}>이어서하기</button>
-          </div>
-        </div>
+    const items = [
+      { label: '시작', action: () => setStep('pilot'), disabled: false },
+      { label: '이어하기', action: () => savedPilot && enterGame(), disabled: !savedPilot },
+      { label: '파일럿 도감', action: () => setStep('catalog'), disabled: false },
+      { label: '설정', action: () => setStep('options'), disabled: false },
+    ];
+    return <main className="frontier-title" aria-label="슈퍼로봇대전 프론티어 시작 화면">
+      <div className="frontier-title-stage">
+        <img className="frontier-title-background" src="/ui/title-background.png" alt="슈퍼로봇대전 프론티어 — 더 넓은 우주, 더 많은 인연"/>
+        <nav className="frontier-title-menu" aria-label="시작 메뉴" onKeyDown={(event) => {
+          if (!['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(event.key)) return;
+          event.preventDefault();
+          const buttons = Array.from(event.currentTarget.querySelectorAll<HTMLButtonElement>('button:not(:disabled)'));
+          const current = buttons.indexOf(document.activeElement as HTMLButtonElement);
+          const next = event.key === 'Home' ? 0 : event.key === 'End' ? buttons.length - 1 : (current + (event.key === 'ArrowUp' ? -1 : 1) + buttons.length) % buttons.length;
+          buttons[next]?.focus();
+        }}>
+          {items.map((item, index) => <button key={item.label} className={`frontier-title-button ${selectedMenu === index ? 'is-selected' : ''}`} disabled={item.disabled} title={item.disabled ? '저장된 게임이 없습니다' : undefined} onPointerEnter={() => !item.disabled && setSelectedMenu(index)} onFocus={() => setSelectedMenu(index)} onClick={item.action}>
+            <span className="title-button-frame" aria-hidden="true"/><span className="title-chevron left" aria-hidden="true">»</span><span className="title-button-label">{item.label}</span><span className="title-chevron right" aria-hidden="true">«</span>
+          </button>)}
+        </nav>
+        <div className="frontier-title-ornament" aria-hidden="true"><i/><span/><i/></div>
       </div>
-    );
+    </main>;
   }
 
   if (step === 'pilot') {

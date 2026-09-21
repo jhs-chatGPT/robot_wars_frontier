@@ -1,0 +1,27 @@
+/* 1920 × 1080 design canvas. Original art remains an independent image. */
+.frontier-title{position:fixed;inset:0;display:grid;place-items:center;background:#02070d;overflow:hidden}
+.frontier-title-stage{position:relative;width:min(100vw,177.777778dvh);aspect-ratio:16/9;container-type:inline-size;isolation:isolate}
+.frontier-title-background{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;pointer-events:none}
+.frontier-title-menu{position:absolute;left:55.208333%;top:55.555556%;width:17.708333%;display:flex;flex-direction:column;gap:.729167cqw}
+.frontier-title-button{position:relative;isolation:isolate;width:100%;height:2.916667cqw;flex:none;padding:0;border:0;border-radius:0;background:transparent;color:#e8f4ff;cursor:pointer;font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif;font-size:1.458333cqw;font-weight:700;line-height:1;letter-spacing:.06em;filter:drop-shadow(0 0 4px #41bfff33);transition:filter 150ms ease}
+.title-button-frame{position:absolute;inset:0;z-index:-1;clip-path:polygon(3% 0,97% 0,100% 20%,100% 80%,97% 100%,3% 100%,0 80%,0 20%);background:linear-gradient(135deg,#8dc5e1,#304860 34%,#6c9aba 75%,#29bbff)}
+.title-button-frame:before{content:'';position:absolute;inset:2px;clip-path:inherit;background:linear-gradient(180deg,#223446,#081321 45%,#304661)}
+.title-button-frame:after{content:'';position:absolute;inset:5px;clip-path:inherit;border:1px solid #5886a7;background:linear-gradient(110deg,rgba(5,17,31,.80),rgba(7,21,36,.80))}
+.title-button-label{display:inline-block;text-shadow:0 1px 3px #000}
+.frontier-title-button:hover{filter:drop-shadow(0 0 10px #32bfff73)}
+.frontier-title-button.is-selected,.frontier-title-button:focus-visible{filter:drop-shadow(0 0 16px #13bfffA6);color:#f2fcff;outline:none}
+.frontier-title-button.is-selected .title-button-frame,.frontier-title-button:focus-visible .title-button-frame{background:linear-gradient(120deg,#b2f5ff,#00b7ff 35%,#4edcff 75%,#0988d6)}
+.frontier-title-button.is-selected .title-button-frame:after,.frontier-title-button:focus-visible .title-button-frame:after{border-color:#1ebfff;background:linear-gradient(100deg,#04456dd9,#043154dd,#055480d9);box-shadow:inset 0 0 15px #008dff80}
+.title-chevron{position:absolute;top:50%;transform:translateY(-55%);font-size:2.1cqw;font-weight:900;color:#ddfbff;text-shadow:0 0 6px #16baff;opacity:0}
+.title-chevron.left{left:-.7cqw}.title-chevron.right{right:-.7cqw}
+.is-selected .title-chevron,:focus-visible>.title-chevron{opacity:1}
+.frontier-title-button:active .title-button-label{transform:translateY(1px)}
+.frontier-title-button:active .title-button-frame:after{filter:brightness(1.25)}
+.frontier-title-button:disabled{opacity:.72;cursor:not-allowed;color:#adc2d4;filter:none}
+.frontier-title-ornament{position:absolute;left:50.520833%;top:86.111111%;width:27.083333%;height:.7cqw;display:flex;align-items:center;filter:drop-shadow(0 0 4px #1cbcff99)}
+.frontier-title-ornament:before,.frontier-title-ornament:after{content:'';height:1px;flex:1;background:linear-gradient(90deg,transparent,#39bdff)}
+.frontier-title-ornament:after{transform:scaleX(-1)}
+.frontier-title-ornament span{width:48%;height:100%;border-bottom:1px solid #68caff;border-left:1px solid #68caff;border-right:1px solid #68caff;transform:skewX(-25deg)}
+.frontier-title-ornament i{width:.22cqw;height:.22cqw;background:#a8f5ff;box-shadow:0 0 5px #13bdff}
+.title-subpage{min-height:100dvh;padding:24px;background:#06111e}.title-subpage .screen-scroll{height:auto;overflow:visible}.title-back{padding:12px 24px;border:1px solid #39bfff;background:#102c42;color:#eefaff;cursor:pointer}
+@media(prefers-reduced-motion:reduce){.frontier-title-button{transition:none}}
